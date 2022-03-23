@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:elevation="10dp"
+    android:layout_margin="12dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/Amountreceived_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Amount received"
+            android:textColor="#191919"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/Amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Amountreceived_tv"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="\u20B9 60,000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/settlement_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Amount_tv"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="SETTLEMENT DATE"
+            android:textColor="#AEAEAE"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/date1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settlement_TV"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="01/12/2021"
+            android:textColor="#636363" />
+        <TextView
+            android:id="@+id/coma_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=","
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/date1_tv"
+            android:layout_alignBottom="@id/date1_tv"/>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/coma_tv"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/coma_tv"
+            android:fontFamily="@font/roboto"
+            android:text="12:00 AM"
+            android:textColor="#636363" />
+
+        <TextView
+            android:id="@+id/transtion_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/settlement_TV"
+            android:layout_marginStart="70dp"
+            android:layout_toRightOf="@id/settlement_TV"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TRANSACTIONS ID"
+            android:textColor="#AEAEAE"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/refId_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transtion_id"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto"
+            android:text="REF_0438151296"
+            android:textColor="#636363" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

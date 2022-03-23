@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="169dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:cardCornerRadius="5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="AAA"
+        android:textColor="#594099"
+        android:fontFamily="@font/pt_serif_bold"
+        android:textSize="36sp" />
+    <TextView
+        android:id="@+id/coursename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="selenium"
+        android:textColor="#636363"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"/>
+    <View
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:background="#E6E6E6"
+        android:layout_gravity="center"
+        android:layout_marginTop="16.5dp"/>
+<TextView
+    android:id="@+id/studentcount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="22 students"
+    android:textColor="#636363"
+    android:fontFamily="@font/roboto"
+    android:textSize="14sp"
+    android:layout_gravity="center"
+    android:layout_marginTop="16.5dp"
+    android:layout_marginBottom="18dp"/>
+
+
+</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

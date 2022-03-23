@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/settings2"
+        android:icon="@drawable/ic_settings"
+        android:title="settings"
+        android:menuCategory="secondary"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/notification"
+        android:title="notifiaction"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/aulasicon"
+        android:icon="@drawable/aulas"
+        android:title="aulasicon"
+        app:showAsAction="ifRoom"/>
+</menu>

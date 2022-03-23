@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivateFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#FAFAFA"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="32dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="Overview"
+                        android:textColor="#191919"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="11/07/2021"
+                            android:textColor="#636363"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="17/07/2021"
+                            android:textColor="#636363"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="\u25cf"
+                            android:textColor="#636363" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="This Week"
+                            android:textColor="#636363" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/ill_no_data2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:text="No Data!"
+                        android:textColor="#191919"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="There are no data to show yet. Please check back later."
+                        android:textColor="#636363" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/overview_Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="Overview"
+                            android:layout_marginTop="18dp"
+                            android:textColor="#191919"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/veiwMore_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VIEW MORE"
+                            android:layout_marginStart="200dp"
+                            android:layout_marginTop="25dp"
+                            android:textColor="#1089FF"
+                            android:textSize="12sp"
+                            android:padding="5dp"
+                            android:fontFamily="@font/roboto_bold"
+                            />
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="11/07/2021"
+                            android:textColor="#636363"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="17/07/2021"
+                            android:textColor="#636363"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="\u25cf"
+                            android:textColor="#636363" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="This Week"
+                            android:textColor="#636363" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u25cf"
+                            android:textColor="#594099"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/Noof_Payments_requestedTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="124"
+                            android:textColor="#594099" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="payment requested"
+                            android:textColor="#594099" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/total_amt_activate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="\u20B9 12000"
+                        android:textColor="#191919"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/payment_request_activate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:text="24 payment requested today"
+                        android:textColor="#AEAEAE"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginTop="24dp"
+                        android:background="#E6E6E6" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp">
+
+                                <TextView
+                                    android:id="@+id/dot1_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\u25cf"
+                                    android:textColor="#FFA931"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPending_Tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/dot1_tv"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toRightOf="@id/dot1_tv"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="52"
+                                    android:textColor="#FFA931"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/paymentPending_Tv"
+                                    android:layout_toRightOf="@id/paymentPending_Tv"
+                                    android:text=" payment pending"
+                                    android:textColor="#FFA931"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPendingAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/paymentPending_Tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="\u20B9 5000"
+                                    android:textColor="#191919"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/paymentpendingtoday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/paymentPendingAmount"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="24"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/paymentPendingAmount"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_toRightOf="@+id/paymentpendingtoday"
+                                    android:fontFamily="@font/roboto"
+                                    android:text=" payment pending today"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="9dp"
+                                android:background="#E6E6E6" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp">
+
+                                <TextView
+                                    android:id="@+id/dot2_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\u25cf"
+                                    android:textColor="#28DF99"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPaid_Tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/dot2_tv"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toRightOf="@id/dot2_tv"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="84"
+                                    android:textColor="#28DF99"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/paymentPaid_Tv"
+                                    android:layout_toRightOf="@id/paymentPaid_Tv"
+                                    android:text=" payment paid"
+                                    android:textColor="#28DF99"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPaidAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/paymentPaid_Tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="\u20B9 9000"
+                                    android:textColor="#191919"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/paymentpaidToday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="4"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_toRightOf="@+id/paymentpaidToday"
+                                    android:fontFamily="@font/roboto"
+                                    android:text=" payment paid today"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="9dp"
+                                android:background="#E6E6E6" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp">
+
+                                <TextView
+                                    android:id="@+id/dot3_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\u25cf"
+                                    android:textColor="#FF414D"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPending3_Tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/dot3_tv"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toRightOf="@id/dot3_tv"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="12"
+                                    android:textColor="#FF414D"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/paymentPending3_Tv"
+                                    android:layout_toRightOf="@id/paymentPending3_Tv"
+                                    android:text=" payment overdue"
+                                    android:textColor="#FF414D"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/amount4_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/paymentPending3_Tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="\u20B9 9000"
+                                    android:textColor="#191919"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/four2_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="4"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_toRightOf="@+id/four2_tv"
+                                    android:fontFamily="@font/roboto"
+                                    android:text=" payment pending today"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="9dp"
+                                android:background="#E6E6E6" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp">
+
+                                <TextView
+                                    android:id="@+id/dot4_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\u25cf"
+                                    android:textColor="#636363"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPending4_Tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/dot4_tv"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toRightOf="@id/dot4_tv"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="12"
+                                    android:textColor="#636363"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/paymentPending4_Tv"
+                                    android:layout_toRightOf="@id/paymentPending4_Tv"
+                                    android:text=" payment canclled"
+                                    android:textColor="#636363"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/amount5_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/paymentPending4_Tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="\u20B9 300"
+                                    android:textColor="#191919"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/four3_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="4"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_toRightOf="@+id/four3_tv"
+                                    android:fontFamily="@font/roboto"
+                                    android:text=" payment pending today"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="9dp"
+                                android:background="#E6E6E6" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp">
+
+                                <TextView
+                                    android:id="@+id/dot5_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\u25cf"
+                                    android:textColor="#1089FF"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/paymentPending5_Tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/dot5_tv"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_toRightOf="@id/dot5_tv"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="12"
+                                    android:textColor="#1089FF"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/paymentPending5_Tv"
+                                    android:layout_toRightOf="@id/paymentPending5_Tv"
+                                    android:text=" payment refunded"
+                                    android:textColor="#1089FF"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/amount6_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/paymentPending5_Tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="\u20B9 300"
+                                    android:textColor="#191919"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/four4_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="4"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_toRightOf="@+id/four4_tv"
+                                    android:fontFamily="@font/roboto"
+                                    android:text=" payment pending today"
+                                    android:textColor="#AEAEAE"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_announcement"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginHorizontal="24dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginBottom="18.5dp"
+                                android:src="@drawable/ic_generate" />
+
+                            <TextView
+
+                                android:id="@+id/GeneratePayment_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/ic_announcement"
+                                android:layout_alignBottom="@+id/ic_announcement"
+                                android:layout_toEndOf="@+id/ic_announcement"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical"
+                                android:text="Generate Payment Request"
+                                android:textColor="#191919"
+                                android:textSize="16sp" />
+
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/GeneratePayment_tv"
+                                android:layout_alignBottom="@+id/GeneratePayment_tv"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="32dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="24.5dp"
+                        android:background="#E6E6E6" />
+
+                    <LinearLayout
+                        android:id="@+id/AddOfflinepayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_assignments"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginHorizontal="24dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginBottom="18.5dp"
+                                android:src="@drawable/ic_offline" />
+
+                            <TextView
+
+                                android:id="@+id/tv_assignments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/ic_assignments"
+                                android:layout_alignBottom="@+id/ic_assignments"
+                                android:layout_toEndOf="@+id/ic_assignments"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical"
+                                android:text="Add Offline Payment"
+                                android:textColor="#191919"
+                                android:textSize="16sp" />
+
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_assignments"
+                                android:layout_alignBottom="@+id/tv_assignments"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="32dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="24.5dp"
+                        android:background="#E6E6E6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Transaction_layout"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_test"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginHorizontal="24dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginBottom="18.5dp"
+                                android:src="@drawable/ic_transactions" />
+
+                            <TextView
+
+                                android:id="@+id/tv_test"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/ic_test"
+                                android:layout_alignBottom="@+id/ic_test"
+                                android:layout_toEndOf="@+id/ic_test"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical"
+                                android:text="Transactions"
+                                android:textColor="#191919"
+                                android:textSize="16sp" />
+
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_test"
+                                android:layout_alignBottom="@+id/tv_test"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="32dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="24.5dp"
+                        android:background="#E6E6E6" />
+
+                    <LinearLayout
+                        android:id="@+id/allStudentslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ic_feepayment"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginHorizontal="24dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginBottom="18.5dp"
+                                android:src="@drawable/ic_baseline_group" />
+
+                            <TextView
+
+                                android:id="@+id/tv_feepayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/ic_feepayment"
+                                android:layout_alignBottom="@+id/ic_feepayment"
+                                android:layout_toEndOf="@+id/ic_feepayment"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical"
+                                android:text="All students"
+                                android:textColor="#191919"
+                                android:textSize="16sp" />
+
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_feepayment"
+                                android:layout_alignBottom="@+id/tv_feepayment"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="32dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/settlement_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:text="Settlements"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Twlve_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/settlement_TV"
+                        android:text="(12)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/Twlve_tv"
+                        android:layout_marginStart="170dp"
+                        android:layout_toRightOf="@id/Twlve_tv"
+                        android:text="VIEW ALL"
+                        android:textColor="#1089FF"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/settlement_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settlement_TV"
+                        android:layout_marginTop="15dp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tv_all_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Recent activities"
+                android:textColor="#191919"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <!-- <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginHorizontal="12dp"
+                 android:layout_marginBottom="32dp"
+                 app:cardCornerRadius="8dp">-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ill_no_data2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="No Data!"
+                    android:textColor="#191919"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="There are no data to show yet. Please check back later."
+                    android:textColor="#636363" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recylerforactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
+            <!--</androidx.cardview.widget.CardView>-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

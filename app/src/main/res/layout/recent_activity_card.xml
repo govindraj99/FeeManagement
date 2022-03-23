@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ElizaImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/mask_group"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+            <TextView
+                android:id="@+id/names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ElizaImg"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/ElizaImg"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Eliza O'Conner"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/integrate_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ElizaImg"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@id/ElizaImg"
+                android:text="Integrated Batch"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/integrate_TV"
+                android:layout_marginStart="2dp"
+                android:layout_toRightOf="@id/integrate_TV"
+                android:text="-" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/integrate_TV"
+                android:layout_marginStart="6dp"
+                android:layout_toRightOf="@id/integrate_TV"
+                android:text="A" />
+
+            <TextView
+                android:id="@+id/twlve_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ElizaImg"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="30dp"
+                android:text="\u20B9 12,000"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Monthlyfee_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twlve_TV"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Monthly fee"
+                android:textColor="#AEAEAE"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/hifen_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/Monthlyfee_TV"
+                android:layout_marginStart="2dp"
+                android:layout_toRightOf="@id/Monthlyfee_TV"
+                android:text="-"
+                android:textColor="#AEAEAE" />
+
+            <TextView
+                android:id="@+id/May_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/hifen_tv"
+                android:layout_marginStart="2dp"
+                android:layout_toRightOf="@id/hifen_tv"
+                android:text="May"
+                android:textColor="#AEAEAE"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dot_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/May_tv"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/May_tv"
+                android:text="\u25cf"
+                android:textColor="#AEAEAE" />
+
+            <TextView
+                android:id="@+id/date2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/dot_tv"
+                android:layout_marginStart="6dp"
+                android:layout_toRightOf="@id/dot_tv"
+                android:text="12/05/2021"
+                android:textColor="#AEAEAE" />
+
+            <TextView
+                android:id="@+id/cooma_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/date2_tv"
+                android:layout_toRightOf="@id/date2_tv"
+                android:text="," />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cooma_tv"
+                android:layout_toRightOf="@id/cooma_tv"
+                android:text="06:00 PM"
+                android:textColor="#AEAEAE" />
+
+            <TextView
+                android:id="@+id/Pendin_TV"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ElizaImg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="170dp"
+                android:layout_toRightOf="@id/ElizaImg"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:text="PENDING"
+                android:textAlignment="center"
+                android:textColor="#FFA931"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/Paid_TV"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ElizaImg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="170dp"
+                android:layout_toRightOf="@id/ElizaImg"
+                android:background="@drawable/border2"
+                android:padding="6dp"
+                android:text="PAID"
+                android:textAlignment="center"
+                android:textColor="#28DF99"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Overdue_TV"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ElizaImg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="170dp"
+                android:layout_toRightOf="@id/ElizaImg"
+                android:background="@drawable/border3"
+                android:padding="6dp"
+                android:text="OVERDUE"
+                android:textAlignment="center"
+                android:textColor="#FF414D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

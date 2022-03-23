@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl1">
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Processing fee"
+        android:layout_marginTop="78dp"
+        android:textSize="10pt"
+        android:layout_marginLeft="24dp"
+        android:textColor="#191919"
+        android:textStyle="bold"
+        />
+
+    <RadioButton
+        android:id="@+id/rb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:buttonTint="@color/purple_500"
+        android:text="Processing fee payable by student"
+        android:textColor="#636363"
+        android:textSize="18sp" />
+    <RadioButton
+        android:id="@+id/rb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb1"
+        android:text="Processing fee payable by institute"
+        android:layout_marginStart="24dp"
+        android:textColor="#636363"
+        android:textSize="18sp"
+        android:buttonTint="@color/purple_500"
+        android:layout_marginTop="24dp"
+
+        />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb2"
+        android:text="UPI and Rupay"
+        android:textSize="17sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="24dp"
+        android:textColor="#636363"
+        />
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:text="Debit and Credit Card"
+        android:textSize="17sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="24dp"
+        android:textColor="#636363"
+        />
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb2"
+        android:text="free"
+        android:textSize="17sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="300dp"
+        android:textColor="#636363"
+        />
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv4"
+        android:text="X - Y %"
+        android:textSize="17sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="300dp"
+        android:textColor="#636363"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbutton"
+        android:layout_below="@id/tv5"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="157dp"
+        android:text="Save"
+        android:textColor="#FFFFFF"/>
+
+
+
+
+
+</RelativeLayout>
+
+
+</FrameLayout>
