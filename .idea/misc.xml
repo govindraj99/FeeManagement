@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/drawable-v24/border7.xml" value="0.126" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/drawable-v24/border9.xml" value="0.1305" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/drawable-v24/ic_arrow_right.xml" value="0.144" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/drawable/Cancelbtn.xml" value="0.126" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/drawable/border.xml" value="0.111" />
@@ -31,19 +32,29 @@
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/IntegratedAcard.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/Integrated_acard.xml" value="0.33" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/all_activity_recyclerview_card.xml" value="0.25" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/all_activity_two_recyclerview_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/all_students_integrated.xml" value="0.5" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/all_students_integrated_card.xml" value="0.75" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/all_transaction_card.xml" value="0.33" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/allstudents.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/bottom_calendar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/child_recyclerview_item.xml" value="0.1" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/custom_bar_popup.xml" value="0.33" />
-        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_activate.xml" value="0.25" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/filterclass_bottomsheet.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/filterclass_recycler_card.xml" value="0.25" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_activate.xml" value="0.2774239207360226" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_add_offline_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_all_activities.xml" value="0.29737206085753803" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_all_activity_alltransaction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_all_activity_recent.xml" value="0.33" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_all_student.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_bottomsheet_calender.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_discountdialoug.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_fee.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_generate_payment2.xml" value="0.22" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_generate_payment_request.xml" value="0.25" />
-        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_integerated_batch_a.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_integerated_batch_a.xml" value="0.392" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_invoice.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_library.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_more.xml" value="0.20416666666666666" />
@@ -53,13 +64,21 @@
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_settings.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_test.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/fragment_transaction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/generatepayment2_card.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/integrated_acard.xml" value="0.25" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/integratetop_sheet.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/issuedate_bottomsheet.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/list_menu.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/paraent_recyclerview_items.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/paymentdate_bottomsheet.xml" value="0.33" />
-        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/recent_activity_card.xml" value="0.1871345029239766" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/recent_activity_card.xml" value="0.5" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/settlement_card.xml" value="0.33" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/status_bottomsheet.xml" value="0.25" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/layout/type_of_paymentbottomsheet.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/menu/integrate_gegenerate_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/menu/nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/menu/search_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/menu/tool_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Govindraj/AndroidStudioProjects/fee_management_new/app/src/main/res/menu/toolbar.xml" value="0.20416666666666666" />
       </map>

@@ -1,7 +1,6 @@
 package com.example.fee_management_new.Api;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class OverViewResponse {
     public TotalPaymentPending totalPaymentPending;
@@ -13,10 +12,12 @@ public class OverViewResponse {
     public ArrayList<Graph> graph;
     public RecentTransactions recentTransactions;
     public SettlementLists settlementLists;
+    public ArrayList<AllStudent> allStudents;
     public ArrayList<Object> paidTransactions;
     public ArrayList<Object> upcomingTransactions;
     public String feepayer;
     public boolean gst;
+
 
     public TotalPaymentPending getTotalPaymentPending() {
         return totalPaymentPending;
@@ -52,6 +53,10 @@ public class OverViewResponse {
 
     public SettlementLists getSettlementLists() {
         return settlementLists;
+    }
+
+    public ArrayList<AllStudent> getAllStudents() {
+        return allStudents;
     }
 
     public ArrayList<Object> getPaidTransactions() {

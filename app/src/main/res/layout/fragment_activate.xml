@@ -228,7 +228,7 @@
                             android:textSize="18dp" />
 
                         <TextView
-                            android:id="@+id/Noof_Payments_requestedTv"
+                            android:id="@+id/total_payment_requested"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -255,7 +255,7 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/payment_request_activate"
+                            android:id="@+id/payment_request_activate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -294,7 +294,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending_Tv"
+                                    android:id="@+id/totalpaymentPending_Tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot1_tv"
@@ -308,8 +308,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending_Tv"
-                                    android:layout_toRightOf="@id/paymentPending_Tv"
+                                    android:layout_alignBottom="@id/totalpaymentPending_Tv"
+                                    android:layout_toRightOf="@id/totalpaymentPending_Tv"
                                     android:text=" payment pending"
                                     android:textColor="#FFA931"
                                     android:textSize="12sp" />
@@ -318,7 +318,7 @@
                                     android:id="@+id/paymentPendingAmount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending_Tv"
+                                    android:layout_below="@id/totalpaymentPending_Tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 5000"
@@ -390,7 +390,7 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPaidAmount"
+                                    android:id="@+id/paymentpaid_amount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/paymentPaid_Tv"
@@ -404,7 +404,7 @@
                                     android:id="@+id/paymentpaidToday"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_below="@+id/paymentpaid_amount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -414,7 +414,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_below="@+id/paymentpaid_amount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
                                     android:layout_toRightOf="@+id/paymentpaidToday"
@@ -444,7 +444,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending3_Tv"
+                                    android:id="@+id/paymentoverdue_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot3_tv"
@@ -458,17 +458,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending3_Tv"
-                                    android:layout_toRightOf="@id/paymentPending3_Tv"
+                                    android:layout_alignBottom="@id/paymentoverdue_tv"
+                                    android:layout_toRightOf="@id/paymentoverdue_tv"
                                     android:text=" payment overdue"
                                     android:textColor="#FF414D"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount4_tv"
+                                    android:id="@+id/overdue_amount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending3_Tv"
+                                    android:layout_below="@id/paymentoverdue_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 9000"
@@ -476,10 +476,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four2_tv"
+                                    android:id="@+id/overdue_todaytv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_below="@+id/overdue_amount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -489,12 +489,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_below="@+id/overdue_amount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four2_tv"
+                                    android:layout_toRightOf="@+id/overdue_todaytv"
                                     android:fontFamily="@font/roboto"
-                                    android:text=" payment pending today"
+                                    android:text=" payment overdue today"
                                     android:textColor="#AEAEAE"
                                     android:textSize="12sp" />
                             </RelativeLayout>
@@ -519,7 +519,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending4_Tv"
+                                    android:id="@+id/paymentcanclled_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot4_tv"
@@ -533,17 +533,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending4_Tv"
-                                    android:layout_toRightOf="@id/paymentPending4_Tv"
+                                    android:layout_alignBottom="@id/paymentcanclled_tv"
+                                    android:layout_toRightOf="@id/paymentcanclled_tv"
                                     android:text=" payment canclled"
                                     android:textColor="#636363"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount5_tv"
+                                    android:id="@+id/canclled_amount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending4_Tv"
+                                    android:layout_below="@id/paymentcanclled_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 300"
@@ -551,10 +551,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four3_tv"
+                                    android:id="@+id/canclled_todaytv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_below="@+id/canclled_amount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -564,12 +564,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_below="@+id/canclled_amount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four3_tv"
+                                    android:layout_toRightOf="@+id/canclled_todaytv"
                                     android:fontFamily="@font/roboto"
-                                    android:text=" payment pending today"
+                                    android:text=" payment cancelled today"
                                     android:textColor="#AEAEAE"
                                     android:textSize="12sp" />
                             </RelativeLayout>
@@ -592,7 +592,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending5_Tv"
+                                    android:id="@+id/payment_refundtv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot5_tv"
@@ -606,17 +606,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending5_Tv"
-                                    android:layout_toRightOf="@id/paymentPending5_Tv"
+                                    android:layout_alignBottom="@id/payment_refundtv"
+                                    android:layout_toRightOf="@id/payment_refundtv"
                                     android:text=" payment refunded"
                                     android:textColor="#1089FF"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount6_tv"
+                                    android:id="@+id/refund_amounttv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending5_Tv"
+                                    android:layout_below="@id/payment_refundtv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 300"
@@ -624,10 +624,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four4_tv"
+                                    android:id="@+id/refunded_todaytv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_below="@+id/refund_amounttv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -637,12 +637,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_below="@+id/refund_amounttv"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four4_tv"
+                                    android:layout_toRightOf="@+id/refunded_todaytv"
                                     android:fontFamily="@font/roboto"
-                                    android:text=" payment pending today"
+                                    android:text=" payment refunded today"
                                     android:textColor="#AEAEAE"
                                     android:textSize="12sp" />
                             </RelativeLayout>
@@ -931,10 +931,13 @@
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_all_notification"
+                android:id="@+id/ra_recentActivites_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -945,6 +948,18 @@
                 android:textColor="#191919"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/ra_viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:text="VIEW ALL"
+                android:layout_toEndOf="@+id/ra_recentActivites_tv"
+                android:textColor="#1089FF"
+                android:layout_alignTop="@+id/ra_recentActivites_tv"
+                android:layout_alignBottom="@+id/ra_recentActivites_tv"
+                android:textStyle="bold" />
+</RelativeLayout>
             <!-- <androidx.cardview.widget.CardView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"

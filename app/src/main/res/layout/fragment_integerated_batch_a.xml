@@ -6,8 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".IntegeratedBatchAFragment">
 
-    <ScrollView
+    <Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="Demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollveiw"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -226,7 +237,7 @@
                             android:textSize="18dp" />
 
                         <TextView
-                            android:id="@+id/Noof_Payments_requestedTv"
+                            android:id="@+id/inte_total_payment_request"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -242,7 +253,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/total_amt_activate"
+                        android:id="@+id/inte_total_payment_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -253,7 +264,7 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/payment_request_activate"
+                        android:id="@+id/inte_total_payment_request_today"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -292,7 +303,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending_Tv"
+                                    android:id="@+id/inte_paymentPending_Tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot1_tv"
@@ -306,17 +317,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending_Tv"
-                                    android:layout_toRightOf="@id/paymentPending_Tv"
+                                    android:layout_alignBottom="@id/inte_paymentPending_Tv"
+                                    android:layout_toRightOf="@id/inte_paymentPending_Tv"
                                     android:text=" payment pending"
                                     android:textColor="#FFA931"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPendingAmount"
+                                    android:id="@+id/Inte_PendingAmount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending_Tv"
+                                    android:layout_below="@id/inte_paymentPending_Tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 5000"
@@ -324,10 +335,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/paymentpendingtoday"
+                                    android:id="@+id/inte_paymentPending_today"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPendingAmount"
+                                    android:layout_below="@+id/Inte_PendingAmount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="24"
@@ -337,10 +348,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPendingAmount"
+                                    android:layout_below="@+id/Inte_PendingAmount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/paymentpendingtoday"
+                                    android:layout_toRightOf="@+id/inte_paymentPending_today"
                                     android:fontFamily="@font/roboto"
                                     android:text=" payment pending today"
                                     android:textColor="#AEAEAE"
@@ -367,7 +378,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPaid_Tv"
+                                    android:id="@+id/inte_paymentpaid_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot2_tv"
@@ -381,17 +392,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPaid_Tv"
-                                    android:layout_toRightOf="@id/paymentPaid_Tv"
+                                    android:layout_alignBottom="@id/inte_paymentpaid_tv"
+                                    android:layout_toRightOf="@id/inte_paymentpaid_tv"
                                     android:text=" payment paid"
                                     android:textColor="#28DF99"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPaidAmount"
+                                    android:id="@+id/inte_paidamount_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPaid_Tv"
+                                    android:layout_below="@id/inte_paymentpaid_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 9000"
@@ -399,10 +410,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/paymentpaidToday"
+                                    android:id="@+id/inte_paymentpaidtoday"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_below="@+id/inte_paidamount_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -412,10 +423,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/paymentPaidAmount"
+                                    android:layout_below="@+id/inte_paidamount_tv"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/paymentpaidToday"
+                                    android:layout_toRightOf="@+id/inte_paymentpaidtoday"
                                     android:fontFamily="@font/roboto"
                                     android:text=" payment paid today"
                                     android:textColor="#AEAEAE"
@@ -442,7 +453,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending3_Tv"
+                                    android:id="@+id/inte_paymentoverdue_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot3_tv"
@@ -456,17 +467,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending3_Tv"
-                                    android:layout_toRightOf="@id/paymentPending3_Tv"
+                                    android:layout_alignBottom="@id/inte_paymentoverdue_tv"
+                                    android:layout_toRightOf="@id/inte_paymentoverdue_tv"
                                     android:text=" payment overdue"
                                     android:textColor="#FF414D"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount4_tv"
+                                    android:id="@+id/inte_overdueamount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending3_Tv"
+                                    android:layout_below="@id/inte_paymentoverdue_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 9000"
@@ -474,10 +485,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four2_tv"
+                                    android:id="@+id/inte_paymentoverdue_today"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_below="@+id/inte_overdueamount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -487,12 +498,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount4_tv"
+                                    android:layout_below="@+id/inte_overdueamount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four2_tv"
+                                    android:layout_toRightOf="@+id/inte_paymentoverdue_today"
                                     android:fontFamily="@font/roboto"
-                                    android:text=" payment pending today"
+                                    android:text=" payments overdue today"
                                     android:textColor="#AEAEAE"
                                     android:textSize="12sp" />
                             </RelativeLayout>
@@ -517,7 +528,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending4_Tv"
+                                    android:id="@+id/inte_paymentcancelled"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot4_tv"
@@ -531,17 +542,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending4_Tv"
-                                    android:layout_toRightOf="@id/paymentPending4_Tv"
+                                    android:layout_alignBottom="@id/inte_paymentcancelled"
+                                    android:layout_toRightOf="@id/inte_paymentcancelled"
                                     android:text=" payment canclled"
                                     android:textColor="#636363"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount5_tv"
+                                    android:id="@+id/inte_cancelled_amount"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending4_Tv"
+                                    android:layout_below="@id/inte_paymentcancelled"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 300"
@@ -549,10 +560,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four3_tv"
+                                    android:id="@+id/inte_paymentcancelled_today"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_below="@+id/inte_cancelled_amount"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -562,10 +573,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount5_tv"
+                                    android:layout_below="@+id/inte_cancelled_amount"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four3_tv"
+                                    android:layout_toRightOf="@+id/inte_paymentcancelled_today"
                                     android:fontFamily="@font/roboto"
                                     android:text=" payment pending today"
                                     android:textColor="#AEAEAE"
@@ -590,7 +601,7 @@
                                     android:textSize="18dp" />
 
                                 <TextView
-                                    android:id="@+id/paymentPending5_Tv"
+                                    android:id="@+id/inte_paymentrefund_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignBaseline="@id/dot5_tv"
@@ -604,17 +615,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/paymentPending5_Tv"
-                                    android:layout_toRightOf="@id/paymentPending5_Tv"
+                                    android:layout_alignBottom="@id/inte_paymentrefund_tv"
+                                    android:layout_toRightOf="@id/inte_paymentrefund_tv"
                                     android:text=" payment refunded"
                                     android:textColor="#1089FF"
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/amount6_tv"
+                                    android:id="@+id/inte_amountrefund_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/paymentPending5_Tv"
+                                    android:layout_below="@id/inte_paymentrefund_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="\u20B9 300"
@@ -622,10 +633,10 @@
                                     android:textSize="16sp" />
 
                                 <TextView
-                                    android:id="@+id/four4_tv"
+                                    android:id="@+id/inte_paymentrefunded_today"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_below="@+id/inte_amountrefund_tv"
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/roboto"
                                     android:text="4"
@@ -635,12 +646,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/amount6_tv"
+                                    android:layout_below="@+id/inte_amountrefund_tv"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginBottom="14dp"
-                                    android:layout_toRightOf="@+id/four4_tv"
+                                    android:layout_toRightOf="@+id/inte_paymentrefunded_today"
                                     android:fontFamily="@font/roboto"
-                                    android:text=" payment pending today"
+                                    android:text=" payments refunded today"
                                     android:textColor="#AEAEAE"
                                     android:textSize="12sp" />
                             </RelativeLayout>
@@ -654,231 +665,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginBottom="32dp"
-                app:cardCornerRadius="8dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/ic_announcement"
-                                android:layout_width="36dp"
-                                android:layout_height="36dp"
-                                android:layout_marginHorizontal="24dp"
-                                android:layout_marginTop="24dp"
-                                android:layout_marginBottom="18.5dp"
-                                android:src="@drawable/ic_generate" />
-
-                            <TextView
-
-                                android:id="@+id/GeneratePayment_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/ic_announcement"
-                                android:layout_alignBottom="@+id/ic_announcement"
-                                android:layout_toEndOf="@+id/ic_announcement"
-                                android:fontFamily="@font/roboto_medium"
-                                android:gravity="center_vertical"
-                                android:text="Generate Payment Request"
-                                android:textColor="#191919"
-                                android:textSize="16sp" />
-
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/GeneratePayment_tv"
-                                android:layout_alignBottom="@+id/GeneratePayment_tv"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="32dp"
-                                android:background="@color/white"
-                                android:src="@drawable/ic_arrow_right" />
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginHorizontal="24.5dp"
-                        android:background="#E6E6E6" />
-
-                    <LinearLayout
-                        android:id="@+id/AddOfflinepayment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/ic_assignments"
-                                android:layout_width="36dp"
-                                android:layout_height="36dp"
-                                android:layout_marginHorizontal="24dp"
-                                android:layout_marginTop="24dp"
-                                android:layout_marginBottom="18.5dp"
-                                android:src="@drawable/ic_offline" />
-
-                            <TextView
-
-                                android:id="@+id/tv_assignments"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/ic_assignments"
-                                android:layout_alignBottom="@+id/ic_assignments"
-                                android:layout_toEndOf="@+id/ic_assignments"
-                                android:fontFamily="@font/roboto_medium"
-                                android:gravity="center_vertical"
-                                android:text="Add Offline Payment"
-                                android:textColor="#191919"
-                                android:textSize="16sp" />
-
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/tv_assignments"
-                                android:layout_alignBottom="@+id/tv_assignments"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="32dp"
-                                android:background="@color/white"
-                                android:src="@drawable/ic_arrow_right" />
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginHorizontal="24.5dp"
-                        android:background="#E6E6E6" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/Transaction_layout"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/ic_test"
-                                android:layout_width="36dp"
-                                android:layout_height="36dp"
-                                android:layout_marginHorizontal="24dp"
-                                android:layout_marginTop="24dp"
-                                android:layout_marginBottom="18.5dp"
-                                android:src="@drawable/ic_transactions" />
-
-                            <TextView
-
-                                android:id="@+id/tv_test"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/ic_test"
-                                android:layout_alignBottom="@+id/ic_test"
-                                android:layout_toEndOf="@+id/ic_test"
-                                android:fontFamily="@font/roboto_medium"
-                                android:gravity="center_vertical"
-                                android:text="Transactions"
-                                android:textColor="#191919"
-                                android:textSize="16sp" />
-
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/tv_test"
-                                android:layout_alignBottom="@+id/tv_test"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="32dp"
-                                android:background="@color/white"
-                                android:src="@drawable/ic_arrow_right" />
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginHorizontal="24.5dp"
-                        android:background="#E6E6E6" />
-
-                    <LinearLayout
-                        android:id="@+id/allStudentslayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/ic_feepayment"
-                                android:layout_width="36dp"
-                                android:layout_height="36dp"
-                                android:layout_marginHorizontal="24dp"
-                                android:layout_marginTop="24dp"
-                                android:layout_marginBottom="18.5dp"
-                                android:src="@drawable/ic_baseline_group" />
-
-                            <TextView
-
-                                android:id="@+id/tv_feepayment"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/ic_feepayment"
-                                android:layout_alignBottom="@+id/ic_feepayment"
-                                android:layout_toEndOf="@+id/ic_feepayment"
-                                android:fontFamily="@font/roboto_medium"
-                                android:gravity="center_vertical"
-                                android:text="All students"
-                                android:textColor="#191919"
-                                android:textSize="16sp" />
-
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/tv_feepayment"
-                                android:layout_alignBottom="@+id/tv_feepayment"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="32dp"
-                                android:background="@color/white"
-                                android:src="@drawable/ic_arrow_right" />
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -911,7 +698,8 @@
 <!--                        android:text="(12)" />-->
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/inte_viewall"
+                        android:layout_width="65dp"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@id/recentActivitytv"
                         android:layout_marginStart="170dp"
@@ -921,7 +709,7 @@
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/settlement_RV"
+                        android:id="@+id/integrateRv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/recentActivitytv"
@@ -990,7 +778,7 @@
                 android:visibility="visible">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recylerforactivity"
+                    android:id="@+id/AllStudentsRv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

@@ -54,27 +54,9 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="3dp"
             android:fontFamily="@font/roboto"
-            android:text="01/12/2021"
+            android:text="01/12/2021 12:00 AM"
             android:textColor="#636363" />
-        <TextView
-            android:id="@+id/coma_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=","
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@id/date1_tv"
-            android:layout_alignBottom="@id/date1_tv"/>
 
-        <TextView
-            android:id="@+id/time_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/coma_tv"
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@id/coma_tv"
-            android:fontFamily="@font/roboto"
-            android:text="12:00 AM"
-            android:textColor="#636363" />
 
         <TextView
             android:id="@+id/transtion_id"

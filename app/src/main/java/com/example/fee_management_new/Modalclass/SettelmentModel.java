@@ -2,12 +2,12 @@ package com.example.fee_management_new.Modalclass;
 
 public class SettelmentModel {
 
-    String amount,date,time,refId;
+    String amount,date,refId;
 
-    public SettelmentModel(String amount, String date, String time, String refId) {
+    public SettelmentModel(String amount, String date, String refId) {
         this.amount = amount;
         this.date = date;
-        this.time = time;
+
         this.refId = refId;
     }
 
@@ -19,9 +19,7 @@ public class SettelmentModel {
         return date;
     }
 
-    public String getTime() {
-        return time;
-    }
+
 
     public String getRefId() {
         return refId;

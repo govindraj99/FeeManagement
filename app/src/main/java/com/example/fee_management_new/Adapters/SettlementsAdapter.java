@@ -36,7 +36,7 @@ public class SettlementsAdapter extends RecyclerView.Adapter<SettlementsAdapter.
         SettelmentModel currentModel = settelmentModels.get(position);
         holder.amount.setText(currentModel.getAmount());
         holder.date.setText(currentModel.getDate());
-        holder.time.setText(currentModel.getTime());
+
         holder.refId.setText(currentModel.getRefId());
 
     }
@@ -52,7 +52,7 @@ public class SettlementsAdapter extends RecyclerView.Adapter<SettlementsAdapter.
             super(itemView);
             amount = itemView.findViewById(R.id.Amount_tv);
             date = itemView.findViewById(R.id.date1_tv);
-            time = itemView.findViewById(R.id.time_tv);
+
             refId = itemView.findViewById(R.id.refId_tv);
         }
     }

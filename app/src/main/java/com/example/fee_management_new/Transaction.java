@@ -35,7 +35,7 @@ public class Transaction extends Fragment {
     RecyclerView.Adapter adapter;
     CardView TransacCardview;
     NavController navController;
-    LinearLayout Paymentdate_Bottomsheet,TypeofPayment_layout;
+    LinearLayout Paymentdate_Bottomsheet, TypeofPayment_layout;
 
 
     public Transaction() {
@@ -78,10 +78,10 @@ public class Transaction extends Fragment {
     }
 
     private void bottomsheetTypeofPayment() {
-        view = getLayoutInflater().inflate(R.layout.type_of_paymentbottomsheet,null);
-        BottomSheetDialog bt = new BottomSheetDialog(getActivity(),R.style.AppBottomSheetDialogTheme);
+        view = getLayoutInflater().inflate(R.layout.type_of_paymentbottomsheet, null);
+        BottomSheetDialog bt = new BottomSheetDialog(getActivity(), R.style.AppBottomSheetDialogTheme);
         bt.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        bt.getWindow().getAttributes().windowAnimations=R.style.DialogAnimation;
+        bt.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         bt.setContentView(view);
         bt.setCanceledOnTouchOutside(true);
         bt.getWindow().setGravity(Gravity.BOTTOM);
@@ -91,35 +91,34 @@ public class Transaction extends Fragment {
     }
 
     private void bottomsheetPaymentdate() {
-        view = getLayoutInflater().inflate(R.layout.paymentdate_bottomsheet,null);
-        BottomSheetDialog bt = new BottomSheetDialog(getActivity(),R.style.AppBottomSheetDialogTheme);
-                bt.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                bt.getWindow().getAttributes().windowAnimations=R.style.DialogAnimation;
-                bt.setContentView(view);
-                bt.setCanceledOnTouchOutside(true);
+        view = getLayoutInflater().inflate(R.layout.paymentdate_bottomsheet, null);
+        BottomSheetDialog bt = new BottomSheetDialog(getActivity(), R.style.AppBottomSheetDialogTheme);
+        bt.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        bt.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        bt.setContentView(view);
+        bt.setCanceledOnTouchOutside(true);
         bt.getWindow().setGravity(Gravity.BOTTOM);
         bt.setCanceledOnTouchOutside(true);
-                bt.show();
+        bt.show();
 
-            }
-
+    }
 
 
     private void buildTransactionCard() {
         rvTransaction = view.findViewById(R.id.TransactionRv);
         rvTransaction.setHasFixedSize(true);
         rvTransaction.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvTransaction.setAdapter(new TransactionAdapter(transactionData,getContext(),getParentFragmentManager()));
+        rvTransaction.setAdapter(new TransactionAdapter(transactionData, getContext(), getParentFragmentManager()));
 
     }
-    private void CreateTransactionCard(){
+
+    private void CreateTransactionCard() {
         transactionData = new ArrayList<>();
-        transactionData.add(new TransactionData("Eliza O’Conner","Integrated batch","A","1200","12/05/2021, 06:00 PM"));
-        transactionData.add(new TransactionData("Trix West","Integrated batch","A","1200","12/05/2021, 06:00 PM"));
-        transactionData.add(new TransactionData("gggg","Integrated batch","A","1200","12/05/2021, 06:00 PM"));
-        transactionData.add(new TransactionData("yyyyy","Integrated batch","A","1200","12/05/2021, 06:00 PM"));
+        transactionData.add(new TransactionData("Eliza O’Conner", "Integrated batch", "A", "1200", "12/05/2021, 06:00 PM"));
+        transactionData.add(new TransactionData("Trix West", "Integrated batch", "A", "1200", "12/05/2021, 06:00 PM"));
+        transactionData.add(new TransactionData("gggg", "Integrated batch", "A", "1200", "12/05/2021, 06:00 PM"));
+        transactionData.add(new TransactionData("yyyyy", "Integrated batch", "A", "1200", "12/05/2021, 06:00 PM"));
     }
-
 
 
 }

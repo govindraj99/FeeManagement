@@ -184,6 +184,7 @@
                     app:boxStrokeColor="#E6E6E6"
                     app:endIconDrawable="@drawable/ic_calendar"
                     app:endIconMode="custom"
+                    android:focusableInTouchMode="false"
                     app:hintTextColor="#AEAEAE">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -306,7 +307,7 @@
 
                         <TextView
                             android:id="@+id/DiscountTV"
-                            android:layout_width="wrap_content"
+                            android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="8dp"
@@ -334,7 +335,53 @@
                             android:textSize="14sp" />
                         <TextView
                             android:id="@+id/add_tv"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Add"
+                            android:textColor="#1089FF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/discount2_layout"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="18dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/DiscountTV2"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:padding="8dp"
+                            android:text="Discount"
+                            android:textColor="#1089FF"
+                            android:textSize="14sp" />
+
+                        <TextView
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="180dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="-\u20B9"
+                            android:textColor="#1089FF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="0.00"
+                            android:visibility="gone"
+                            android:textColor="#1089FF"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/add_tv2"
+                            android:layout_width="35dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:fontFamily="@font/roboto_medium"
@@ -410,6 +457,7 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/total_amt_payable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"

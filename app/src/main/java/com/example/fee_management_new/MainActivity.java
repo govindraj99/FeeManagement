@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.activity_main_nav_host_fragment);
         navController = navHostFragment.getNavController();
         parent_layout = findViewById(R.id.Parent_layout);
-        bottomNavigationView = findViewById(R.id.activity_main_bottom_navigation_view);
-
-        NavigationUI.setupWithNavController(bottomNavigationView, navController);
+//        bottomNavigationView = findViewById(R.id.activity_main_bottom_navigation_view);
+//
+//        NavigationUI.setupWithNavController(bottomNavigationView, navController);
         //Toolbar
 
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -69,21 +69,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
-                if (navDestination.getId() == R.id.generatePaymentRequest) {
-                    bottomNavigationView.setVisibility(View.GONE);
-                } else if (navDestination.getId() == R.id.addOfflinePayment){
-                    bottomNavigationView.setVisibility(View.GONE);
-
-                }else if (navDestination.getId() == R.id.transaction){
-                    bottomNavigationView.setVisibility(View.GONE);
-                }else {
-                    bottomNavigationView.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+//        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+//            @Override
+//            public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
+//                if (navDestination.getId() == R.id.generatePaymentRequest) {
+//                    bottomNavigationView.setVisibility(View.GONE);
+//                } else if (navDestination.getId() == R.id.addOfflinePayment){
+//                    bottomNavigationView.setVisibility(View.GONE);
+//
+//                }else if (navDestination.getId() == R.id.transaction){
+//                    bottomNavigationView.setVisibility(View.GONE);
+//                }else {
+//                    bottomNavigationView.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        });
 
     }
 
@@ -94,20 +94,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.tool_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.tool_menu, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment);
-        return NavigationUI.onNavDestinationSelected(item, navController)
-                || super.onOptionsItemSelected(item);
-
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+////        navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment);
+//        return NavigationUI.onNavDestinationSelected(item, navController)
+//                || super.onOptionsItemSelected(item);
+//
+//    }
 
 
 }

@@ -20,16 +20,16 @@ public class IntegratedRecentActivityAdapter extends RecyclerView.Adapter<Integr
     Context context;
     FragmentManager fragmentManager;
 
-    public IntegratedRecentActivityAdapter(ArrayList<IntegratedRecentActivityModalClass> integratedModelClass, Context context, FragmentManager fragmentManager) {
+    public IntegratedRecentActivityAdapter(ArrayList<IntegratedRecentActivityModalClass> integratedModelClass,Context context) {
         this.integratedModelClass = integratedModelClass;
         this.context = context;
-        this.fragmentManager = fragmentManager;
+
     }
 
     @NonNull
     @Override
     public IntegratedRecentActivityViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.Integrated_acard,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.integrated_acard,parent,false);
         IntegratedRecentActivityViewHolder integratedRecentActivityViewHolder = new IntegratedRecentActivityViewHolder(view);
 
         return integratedRecentActivityViewHolder;
@@ -37,12 +37,17 @@ public class IntegratedRecentActivityAdapter extends RecyclerView.Adapter<Integr
 
     @Override
     public void onBindViewHolder(@NonNull IntegratedRecentActivityViewHolder holder, int position) {
+        IntegratedRecentActivityModalClass currentData = integratedModelClass.get(position);
+        holder.date.setText(currentData.getDate());
+        holder.Amount.setText(currentData.getAmount());
+//        holder.month.setText(currentData.getMonth());
+        holder.name.setText(currentData.getName());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return integratedModelClass.size();
     }
 
     public class IntegratedRecentActivityViewHolder extends RecyclerView.ViewHolder{
@@ -53,8 +58,8 @@ public class IntegratedRecentActivityAdapter extends RecyclerView.Adapter<Integr
             super(itemView);
             name = itemView.findViewById(R.id.names);
             Amount = itemView.findViewById(R.id.amount_tv);
-            month = itemView.findViewById(R.id.monthlyfee_tv);
-            date = itemView.findViewById(R.id.)
+            month = itemView.findViewById(R.id.month_tv);
+            date = itemView.findViewById(R.id.datetv);
         }
     }
 }

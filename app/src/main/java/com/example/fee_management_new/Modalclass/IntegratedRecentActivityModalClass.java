@@ -1,12 +1,11 @@
 package com.example.fee_management_new.Modalclass;
 
 public class IntegratedRecentActivityModalClass {
-    String name,amount,month,date;
+    String name,amount,date;
 
-    public IntegratedRecentActivityModalClass(String name, String amount, String month, String date) {
+    public IntegratedRecentActivityModalClass(String name, String amount, String date) {
         this.name = name;
         this.amount = amount;
-        this.month = month;
         this.date = date;
     }
 
@@ -18,9 +17,9 @@ public class IntegratedRecentActivityModalClass {
         return amount;
     }
 
-    public String getMonth() {
-        return month;
-    }
+//    public String getMonth() {
+//        return month;
+//    }
 
     public String getDate() {
         return date;

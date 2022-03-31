@@ -70,6 +70,9 @@
         <action
             android:id="@+id/action_activateFrag_to_allStudentFragment"
             app:destination="@id/allStudentFragment" />
+        <action
+            android:id="@+id/action_activateFrag_to_allActivityRecentFragment"
+            app:destination="@id/allActivityRecentFragment" />
     </fragment>
     <fragment
         android:id="@+id/overview"
@@ -124,5 +127,46 @@
         android:id="@+id/allStudentFragment"
         android:name="com.example.fee_management_new.AllStudentFragment"
         android:label="All students"
-        tools:layout="@layout/fragment_all_student" />
+        tools:layout="@layout/fragment_all_student" >
+        <action
+            android:id="@+id/action_allStudentFragment_to_integeratedBatchAFragment"
+            app:destination="@id/integeratedBatchAFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/integeratedBatchAFragment"
+        android:name="com.example.fee_management_new.IntegeratedBatchAFragment"
+        android:label="I {std} - {section}"
+        tools:layout="@layout/fragment_integerated_batch_a">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="std"
+            app:argType="string" />
+        <argument
+            android:name="section"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_integeratedBatchAFragment_to_allActivitiesFragment"
+            app:destination="@id/allActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatePaymentFragment2"
+        android:name="com.example.fee_management_new.GeneratePaymentFragment2"
+        android:label="fragment_generate_payment2"
+        tools:layout="@layout/fragment_generate_payment2" />
+    <fragment
+        android:id="@+id/allActivityRecentFragment"
+        android:name="com.example.fee_management_new.AllActivityRecentFragment"
+        android:label="All activites"
+        tools:layout="@layout/fragment_all_activity_alltransaction" />
+    <fragment
+        android:id="@+id/allActivitiesFragment"
+        android:name="com.example.fee_management_new.AllActivitiesTwoFragment"
+        android:label="fragment_all_activities"
+        tools:layout="@layout/fragment_all_activities" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

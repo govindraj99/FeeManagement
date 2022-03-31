@@ -95,6 +95,7 @@
                 android:textColor="#636363" />
 
             <TextView
+                android:id="@+id/month_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/dash_tv"
@@ -167,8 +168,7 @@
                 android:textAlignment="center"
                 android:textColor="#636363"
                 android:textSize="12sp"
-                android:textStyle="bold"
-               />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/paymentrefund_tv"
@@ -188,6 +188,7 @@
                 android:visibility="gone" />
 
             <TextView
+                android:id="@+id/datetv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/amount_tv"
