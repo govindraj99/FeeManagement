@@ -64,5 +64,9 @@ public interface ApiService {
     @Headers({token,link})
     @POST("feev2")
     Call<GenerateNewOfflinePaymentResponse> GENERATE_NEW_OFFLINE_PAYMENT_RESPONSE_CALL(@Body GenerateNewOfflinePaymentRequest generateNewOfflinePaymentRequest);
+
+    @Headers({token,link})
+    @POST("feev2/updateSettings")
+    Call<SettingsResponse> SETTINGS_RESPONSE_CALL(@Body SettingsRequest settingsRequest);
 }
 
