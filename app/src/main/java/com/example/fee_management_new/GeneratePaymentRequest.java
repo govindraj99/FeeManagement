@@ -52,7 +52,7 @@ import retrofit2.Response;
 
 public class GeneratePaymentRequest extends Fragment implements CalendarBottomsheet.CalendarBottomsheetListener {
     View view;
-    ArrayList<String> stdName,stdSecName;
+    ArrayList<String> stdName, stdSecName;
     NavController navController;
     Button Individualbtn, Send_Request_btn;
     TextView AddTV, discounttv;
@@ -191,7 +191,7 @@ public class GeneratePaymentRequest extends Fragment implements CalendarBottomsh
         Call<HashMap<String, ArrayList<ClassName>>> mapCall = apiService.GetClassResponse();
         mapCall.enqueue(new Callback<HashMap<String, ArrayList<ClassName>>>() {
             @Override
-            public void onResponse(Call<HashMap<String, ArrayList<ClassName>>> call, Response<HashMap<String,ArrayList<ClassName>>> response) {
+            public void onResponse(Call<HashMap<String, ArrayList<ClassName>>> call, Response<HashMap<String, ArrayList<ClassName>>> response) {
                 if (!response.isSuccessful()) {
                     Log.i(TAG, "onResponse: " + response.code());
                     Toast.makeText(getContext(), String.valueOf(response.code()), Toast.LENGTH_LONG);
@@ -206,14 +206,14 @@ public class GeneratePaymentRequest extends Fragment implements CalendarBottomsh
                 }
                 Collections.sort(stdName);
                 stdSecName = new ArrayList<>();
-                for (String s:
-                     stdName) {
-                    for (ClassName c:
-                         listHashMap.get(s)) {
-                        stdSecName.add(s+"-"+c.getSection());
+                for (String s :
+                        stdName) {
+                    for (ClassName c :
+                            listHashMap.get(s)) {
+                        stdSecName.add(s + "-" + c.getSection());
                     }
                 }
-                Log.i(TAG, "onResponse: "+stdSecName.size());
+                Log.i(TAG, "onResponse: " + stdSecName.size());
                 setAdapter();
                 selectClass.addTextChangedListener(new TextWatcher() {
                     @Override
@@ -228,36 +228,36 @@ public class GeneratePaymentRequest extends Fragment implements CalendarBottomsh
                         String std = stdAndSecs[0];
                         String sec = stdAndSecs[1];
                         int stdId = 0;
-                        Log.i(TAG, "onTextChanged: "+std);
-                        Log.i(TAG, "onTextChanged: "+sec);
-                        for (String s:
-                             stdName) {
-                            if (s.equals(std)){
-                                for (ClassName c:
-                                     listHashMap.get(s)) {
+                        Log.i(TAG, "onTextChanged: " + std);
+                        Log.i(TAG, "onTextChanged: " + sec);
+                        for (String s :
+                                stdName) {
+                            if (s.equals(std)) {
+                                for (ClassName c :
+                                        listHashMap.get(s)) {
                                     if (c.getSection().equals(sec)) stdId = c.getId();
                                 }
                             }
                         }
-                        Log.i(TAG, "onTextChanged: "+stdId);
-                        Call<List<GetUserInAClassResponse>> listCall = apiService.GET_USER_IN_A_CLASS_RESPONSE_CALL(stdId,"");
+                        Log.i(TAG, "onTextChanged: " + stdId);
+                        Call<List<GetUserInAClassResponse>> listCall = apiService.GET_USER_IN_A_CLASS_RESPONSE_CALL(stdId, "");
                         listCall.enqueue(new Callback<List<GetUserInAClassResponse>>() {
                             @Override
                             public void onResponse(Call<List<GetUserInAClassResponse>> call, Response<List<GetUserInAClassResponse>> response) {
-                                if (!response.isSuccessful()){
-                                    Log.i(TAG, "onResponse: "+response.code());
+                                if (!response.isSuccessful()) {
+                                    Log.i(TAG, "onResponse: " + response.code());
                                     Toast.makeText(getContext(), String.valueOf(response.code()), Toast.LENGTH_LONG).show();
                                 }
                                 List<GetUserInAClassResponse> getUserInAClassResponses = response.body();
-                                Log.i(TAG, "onResponse: "+getUserInAClassResponses.get(0).getId());
+                                Log.i(TAG, "onResponse: " + getUserInAClassResponses.get(0).getId());
                                 Toast.makeText(getContext(), String.valueOf(getUserInAClassResponses.get(0).getId()), Toast.LENGTH_LONG).show();
-                                
+
 
                             }
 
                             @Override
                             public void onFailure(Call<List<GetUserInAClassResponse>> call, Throwable t) {
-                                Log.i(TAG, "onFailure: "+t.getMessage());
+                                Log.i(TAG, "onFailure: " + t.getMessage());
                                 Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         });

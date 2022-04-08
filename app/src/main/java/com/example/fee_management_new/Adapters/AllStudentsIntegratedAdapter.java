@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -23,6 +24,8 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
     ArrayList<AllStudentsIntegratedModal> allStudentsModal;
     Context context;
     FragmentManager fragmentManager;
+    ArrayList<String> name=new ArrayList<>();
+    AdapterView.OnItemClickListener onItemClickListener;
     private static final String baseUrlForImages = "https://s3.ap-south-1.amazonaws.com/test.files.classroom.digital/";
 
     public AllStudentsIntegratedAdapter(ArrayList<AllStudentsIntegratedModal> allStudentsModal, Context context, FragmentManager fragmentManager) {
@@ -31,11 +34,12 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
         this.fragmentManager = fragmentManager;
     }
 
+
     @NonNull
     @Override
     public AllStudentsIntegratedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_students_integrated_card, parent, false);
-        AllStudentsIntegratedViewHolder allStudentsIntegratedViewHolder = new AllStudentsIntegratedViewHolder(view);
+        AllStudentsIntegratedViewHolder allStudentsIntegratedViewHolder = new AllStudentsIntegratedViewHolder(view,onItemClickListener);
         return allStudentsIntegratedViewHolder;
     }
 
@@ -46,6 +50,12 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
         holder.rollNoTV.setText(currentData.getRollno());
         Glide.with(context).load(baseUrlForImages+currentData.getImage()).into(holder.Image);
         holder.namesItegrate.setText(currentData.getName());
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                name.add(currentData.getName());
+            }
+        });
 
     }
 
@@ -59,7 +69,7 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
         CheckBox checkBox;
         ImageView Image;
 
-        public AllStudentsIntegratedViewHolder(@NonNull View itemView) {
+        public AllStudentsIntegratedViewHolder(@NonNull View itemView, AdapterView.OnItemClickListener onItemClickListener) {
             super(itemView);
             namesItegrate = itemView.findViewById(R.id.namesintegrate);
             rollNoTV = itemView.findViewById(R.id.rollNo_tv);

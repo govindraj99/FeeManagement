@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/paid_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Paid"
@@ -15,6 +16,7 @@
             android:layout_marginTop="55dp"
             android:fontFamily="@font/roboto"/>
     <CheckBox
+        android:id="@+id/pending_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pending"
@@ -24,6 +26,7 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto"/>
     <CheckBox
+        android:id="@+id/overdue_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Overdue"
@@ -33,6 +36,7 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto"/>
     <CheckBox
+        android:id="@+id/refund_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Refund"

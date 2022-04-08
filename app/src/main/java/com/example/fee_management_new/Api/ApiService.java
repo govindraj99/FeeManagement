@@ -11,6 +11,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
@@ -53,6 +54,13 @@ public interface ApiService {
     @GET("feev2/getUser")
     Call<List<GetUserInAClassResponse>> GET_USER_IN_A_CLASS_RESPONSE_CALL(@Query("standardId") int stdId, @Query("search") String search);
 
+    @Headers({token,link})
+    @GET("feev2/transaction/{id}")
+    Call<PaymentRequestDetailsTwoResponse> PAYMENT_REQUEST_DETAILS_TWO_RESPONSE_CALL(@Path("id") int id);
+
+    @Headers({token,link})
+    @GET("feev2/allTransactions")
+    Call<GetAllTransactionResponse> paidTransactions(@QueryMap Map<String, String> params);
 
 }
 

@@ -1,14 +1,25 @@
 package com.example.fee_management_new.Modalclass;
 
 public class TransactionData {
-    String name,std,section,amount,date;
+    String name,std,section,amount,date,note,paymenttype;
 
-    public TransactionData(String name, String std, String section, String amount, String date) {
+    public TransactionData(String name, String std, String section, String amount, String date,String note,String paymenttype) {
         this.name = name;
         this.std = std;
         this.section = section;
         this.amount = amount;
         this.date = date;
+        this.note = note;
+        this.paymenttype = paymenttype;
+
+    }
+
+    public String getPaymenttype() {
+        return paymenttype;
+    }
+
+    public String getNote() {
+        return note;
     }
 
     public String getName() {

@@ -19,6 +19,7 @@ public class IntegratedRecentActivityAdapter extends RecyclerView.Adapter<Integr
     ArrayList<IntegratedRecentActivityModalClass> integratedModelClass;
     Context context;
     FragmentManager fragmentManager;
+    int uid;
 
     public IntegratedRecentActivityAdapter(ArrayList<IntegratedRecentActivityModalClass> integratedModelClass,Context context) {
         this.integratedModelClass = integratedModelClass;
@@ -42,6 +43,7 @@ public class IntegratedRecentActivityAdapter extends RecyclerView.Adapter<Integr
         holder.Amount.setText(currentData.getAmount());
 //        holder.month.setText(currentData.getMonth());
         holder.name.setText(currentData.getName());
+
 
     }
 
