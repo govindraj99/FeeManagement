@@ -44,10 +44,18 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.names.setText(currentData.getName());
         holder.date.setText(currentData.getDate());
         holder.Section.setText(currentData.getSection());
-        holder.Amount.setText(currentData.getAmount());
+        holder.Amount.setText(new StringBuilder().append("\u20B9 ").append(currentData.getAmount()).toString());
         holder.STDtv.setText(currentData.getStd());
-
-
+        holder.note.setText(currentData.getNote());
+        switch (currentData.getPaymenttype()){
+            case "online":
+                holder.online_TV.setVisibility(View.VISIBLE);
+                holder.offline_TV.setVisibility(View.GONE);
+                break;
+            case "offline":
+                holder.offline_TV.setVisibility(View.VISIBLE);
+                holder.online_TV.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -56,7 +64,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     }
 
     public class TransactionViewHolder extends RecyclerView.ViewHolder {
-        TextView names, STDtv, Section, Amount, date;
+        TextView names, STDtv, Section, Amount, date,note,online_TV,offline_TV;
 
         public TransactionViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +73,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             Section = itemView.findViewById(R.id.sectionT);
             Amount = itemView.findViewById(R.id.Amount_transac);
             date = itemView.findViewById(R.id.date_transac);
+            note = itemView.findViewById(R.id.notetv);
+            offline_TV = itemView.findViewById(R.id.offline_tv);
+            online_TV = itemView.findViewById(R.id.online_tv);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

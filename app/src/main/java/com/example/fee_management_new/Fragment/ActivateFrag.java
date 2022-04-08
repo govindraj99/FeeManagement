@@ -47,6 +47,7 @@ public class ActivateFrag extends Fragment {
     RecyclerView recyclerViewforActivitycard, recViewForSettelmentCard, rvTransaction;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
+    private static final String TAG = "ActivateFrag";
     ArrayList<RecentActivitiesone> recentActivitiesoneArrayList;
     private Retrofit retrofit;
     private ApiService apiService;
@@ -90,46 +91,56 @@ public class ActivateFrag extends Fragment {
                 if (!response.isSuccessful()) {
                     Toast.makeText(getContext(), String.valueOf(response.code()), Toast.LENGTH_SHORT).show();
                 }
-                OverViewResponse overViewResponse = response.body();
-                ArrayList<AllTransactionList> allTransactionLists = overViewResponse.getRecentTransactions().allTransactionList;
-                ArrayList<Item> itemArrayList = overViewResponse.getSettlementLists().getItems();
-                Toast.makeText(getContext(), String.valueOf(overViewResponse.totalPaymentPending.getCount()), Toast.LENGTH_LONG).show();
-                totalpaymentpendingTV.setText(String.valueOf(overViewResponse.totalPaymentPending.getCount()));
-                PaymentPendingToday.setText(String.valueOf(overViewResponse.totalPaymentPending.getTodayCount()));
-                PaymentPendingAmount.setText("\u20B9 " + String.valueOf(overViewResponse.totalPaymentPending.getAmount()));
-                PaymentPaidTV.setText(String.valueOf(overViewResponse.totalPaymentPaid.getCount()));
-                PaymentPaid_Amount.setText(new StringBuilder().append("\u20B9 ").append(String.valueOf(overViewResponse.totalPaymentPaid.getAmount())).toString());
-                PaymentpaidToday.setText(String.valueOf(overViewResponse.totalPaymentPaid.getTodayCount()));
-                overdue_TodayTv.setText(String.valueOf(overViewResponse.totalPaymentOverDue.getTodayCount()));
-                overdue_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentOverDue.getAmount())).toString());
-                PaymentOverdue_TV.setText(String.valueOf(overViewResponse.totalPaymentOverDue.getCount()));
-                paymentCancelTV.setText(String.valueOf(overViewResponse.totalPaymentCancelled.getCount()));
-                canclled_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentCancelled.getAmount())).toString());
-                canclledPaymentTodayTV.setText(String.valueOf(overViewResponse.totalPaymentCancelled.getTodayCount()));
-                payment_RefundTV.setText(String.valueOf(overViewResponse.totalPaymentRefunded.getCount()));
-                refunded_TodayTV.setText(String.valueOf(overViewResponse.totalPaymentRefunded.getTodayCount()));
-                refund_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentRefunded.getAmount())).toString());
-                Payment_request_activate.setText(new StringBuilder().append(String.valueOf(overViewResponse.totalTransactionRequested.getTodayCount())).append(" payments requested today").toString());
-                Total_amt.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalTransactionRequested.getAmount())).toString());
-                total_Payment_Requested.setText(String.valueOf(overViewResponse.totalTransactionRequested.getCount()));
-                //Log.i("date", itemArrayList.get(0).getOpenedDate().toString());
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyy,hh:mm aa");
-                settelmentModels = new ArrayList<>();
+                try {
+                    OverViewResponse overViewResponse = response.body();
+                    ArrayList<AllTransactionList> allTransactionLists = overViewResponse.getRecentTransactions().allTransactionList;
+                    ArrayList<Item> itemArrayList = overViewResponse.getSettlementLists().getItems();
+                    Toast.makeText(getContext(), String.valueOf(overViewResponse.totalPaymentPending.getCount()), Toast.LENGTH_LONG).show();
+                    totalpaymentpendingTV.setText(String.valueOf(overViewResponse.totalPaymentPending.getCount()));
+                    PaymentPendingToday.setText(String.valueOf(overViewResponse.totalPaymentPending.getTodayCount()));
+                    PaymentPendingAmount.setText("\u20B9 " + String.valueOf(overViewResponse.totalPaymentPending.getAmount()));
+                    PaymentPaidTV.setText(String.valueOf(overViewResponse.totalPaymentPaid.getCount()));
+                    PaymentPaid_Amount.setText(new StringBuilder().append("\u20B9 ").append(String.valueOf(overViewResponse.totalPaymentPaid.getAmount())).toString());
+                    PaymentpaidToday.setText(String.valueOf(overViewResponse.totalPaymentPaid.getTodayCount()));
+                    overdue_TodayTv.setText(String.valueOf(overViewResponse.totalPaymentOverDue.getTodayCount()));
+                    overdue_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentOverDue.getAmount())).toString());
+                    PaymentOverdue_TV.setText(String.valueOf(overViewResponse.totalPaymentOverDue.getCount()));
+                    paymentCancelTV.setText(String.valueOf(overViewResponse.totalPaymentCancelled.getCount()));
+                    canclled_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentCancelled.getAmount())).toString());
+                    canclledPaymentTodayTV.setText(String.valueOf(overViewResponse.totalPaymentCancelled.getTodayCount()));
+                    payment_RefundTV.setText(String.valueOf(overViewResponse.totalPaymentRefunded.getCount()));
+                    refunded_TodayTV.setText(String.valueOf(overViewResponse.totalPaymentRefunded.getTodayCount()));
+                    refund_AmountTV.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalPaymentRefunded.getAmount())).toString());
+                    Payment_request_activate.setText(new StringBuilder().append(String.valueOf(overViewResponse.totalTransactionRequested.getTodayCount())).append(" payments requested today").toString());
+                    Total_amt.setText(new StringBuilder().append("\u20B9").append(String.valueOf(overViewResponse.totalTransactionRequested.getAmount())).toString());
+                    total_Payment_Requested.setText(String.valueOf(overViewResponse.totalTransactionRequested.getCount()));
+                    //Log.i("date", itemArrayList.get(0).getOpenedDate().toString());
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyy,hh:mm aa");
+                    settelmentModels = new ArrayList<>();
 
-                for (Item i :
-                        itemArrayList) {
-                    settelmentModels.add(new SettelmentModel(i.getTotal(),
-                            simpleDateFormat.format(i.getOpenedDate()),
-                            i.getRefNo()));
+                    for (Item i :
+                            itemArrayList) {
+                        settelmentModels.add(new SettelmentModel(i.getTotal(),
+                                simpleDateFormat.format(i.getOpenedDate()),
+                                i.getRefNo()));
+                    }
+                    buildSettelmentCard();
+                    recentActivitiesoneArrayList = new ArrayList<>();
+                    for (AllTransactionList j : allTransactionLists) {
+                        if (j.getUser() == null) {
+                            recentActivitiesoneArrayList.add(new RecentActivitiesone("No data", "No data", "No data", j.getAmount(), j.getDate(), j.getStatus(), j.getNote()));
+
+                        }else {
+                            recentActivitiesoneArrayList.add(new RecentActivitiesone(j.getUser().getName(), j.getUser().getStudent().getStandard().getStd(), j.getUser().getStudent().getStandard().getSection(), j.getAmount(), j.getDate(), j.getStatus(), j.getNote()));
+                        }
+
+                    }
+
+                    buildRecentActivity();
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
-                buildSettelmentCard();
-                recentActivitiesoneArrayList = new ArrayList<>();
-                for (AllTransactionList j : allTransactionLists) {
-//                    recentActivitiesoneArrayList.add(new RecentActivitiesone(j.getUser().getName(), j.getUser().getStudent().getStandard().getStd(), j.getUser().getStudent().getStandard().getSection(), j.getAmount(), j.getDate(), j.getStatus(),j.getNote()));
 
-                }
-
-                buildRecentActivity();
             }
 
             @Override

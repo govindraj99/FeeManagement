@@ -124,6 +124,8 @@ public class IntegeratedBatchAFragment extends Fragment {
 //        buildAllStudentRecyclerview();
         setHasOptionsMenu(true);
         id = IntegeratedBatchAFragmentArgs.fromBundle(getArguments()).getId();
+        String section = IntegeratedBatchAFragmentArgs.fromBundle(getArguments()).getSection();
+        String std = IntegeratedBatchAFragmentArgs.fromBundle(getArguments()).getStd();
         Log.i("TAG", String.valueOf(id));
         apiInit();
         overviewforIntegratedRespose();
@@ -180,7 +182,7 @@ public class IntegeratedBatchAFragment extends Fragment {
                 IntegratedRAmodel = new ArrayList<>();
                 for (AllTransactionList i :
                         IAllTransactionLists) {
-                    IntegratedRAmodel.add(new IntegratedRecentActivityModalClass(i.getUser().getName(), String.valueOf(i.getAmountPayable()), i.getDate()));
+                    IntegratedRAmodel.add(new IntegratedRecentActivityModalClass(i.getUser().getName(), String.valueOf(i.getAmountPayable()), i.getDate(),i.getId()));
 
                 }
                 buildIntegratedRecentActivityView();
@@ -230,9 +232,11 @@ public class IntegeratedBatchAFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         navController = Navigation.findNavController(getActivity(), R.id.activity_main_nav_host_fragment);
+
         return NavigationUI.onNavDestinationSelected(item, navController)
                 || super.onOptionsItemSelected(item);
     }

@@ -7,8 +7,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fee_management_new.AllActivitiesTwoFragmentArgs;
+import com.example.fee_management_new.AllActivitiesTwoFragmentDirections;
 import com.example.fee_management_new.Modalclass.AllActivitesTwoModal;
 import com.example.fee_management_new.R;
 
@@ -17,6 +20,7 @@ import java.util.ArrayList;
 public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesTwoAdapter.AllActivitiesTwoViewHolder> {
     Context context;
     ArrayList<AllActivitesTwoModal> allActivitesTwoModals;
+    int id;
 
 
     public AllActivitiesTwoAdapter(Context context, ArrayList<AllActivitesTwoModal> allActivitesTwoModals) {
@@ -40,21 +44,49 @@ public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesT
         holder.allactivitiesTwo_Amount.setText(currentData.getAmount());
         holder.allactivitiesTwo_Note.setText(currentData.getNote());
         holder.allactivitiesTwo_Date.setText(currentData.getDate());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = currentData.getId();
+                com.example.fee_management_new.AllActivitiesTwoFragmentDirections.ActionAllActivitiesFragmentToPaymentRequesrtDetailsTwoFragment action = com.example.fee_management_new.AllActivitiesTwoFragmentDirections.actionAllActivitiesFragmentToPaymentRequesrtDetailsTwoFragment(id);
+                Navigation.findNavController(view).navigate(action);
+            }
+        });
         switch (currentData.getStatus()){
             case "Paid":
                 holder.allactivitiesTwo_Paid.setVisibility(View.VISIBLE);
+                holder.allactivitiesTwo_pending.setVisibility(View.GONE);
+                holder.allactivitiesTwo_cancelle.setVisibility(View.GONE);
+                holder.allactivitiesTwo_refunded.setVisibility(View.GONE);
+                holder.allactivitiesTwo_Overdue.setVisibility(View.GONE);
                 break;
 
             case "Pending":
+                holder.allactivitiesTwo_Paid.setVisibility(View.GONE);
                 holder.allactivitiesTwo_pending.setVisibility(View.VISIBLE);
+                holder.allactivitiesTwo_cancelle.setVisibility(View.GONE);
+                holder.allactivitiesTwo_refunded.setVisibility(View.GONE);
+                holder.allactivitiesTwo_Overdue.setVisibility(View.GONE);
                 break;
             case "Cancelled":
+                holder.allactivitiesTwo_Paid.setVisibility(View.GONE);
+                holder.allactivitiesTwo_pending.setVisibility(View.GONE);
                 holder.allactivitiesTwo_cancelle.setVisibility(View.VISIBLE);
+                holder.allactivitiesTwo_refunded.setVisibility(View.GONE);
+                holder.allactivitiesTwo_Overdue.setVisibility(View.GONE);
                 break;
             case "Refund":
+                holder.allactivitiesTwo_Paid.setVisibility(View.GONE);
+                holder.allactivitiesTwo_pending.setVisibility(View.GONE);
+                holder.allactivitiesTwo_cancelle.setVisibility(View.GONE);
                 holder.allactivitiesTwo_refunded.setVisibility(View.VISIBLE);
+                holder.allactivitiesTwo_Overdue.setVisibility(View.GONE);
                 break;
             case "Overdue":
+                holder.allactivitiesTwo_Paid.setVisibility(View.GONE);
+                holder.allactivitiesTwo_pending.setVisibility(View.GONE);
+                holder.allactivitiesTwo_cancelle.setVisibility(View.GONE);
+                holder.allactivitiesTwo_refunded.setVisibility(View.GONE);
                 holder.allactivitiesTwo_Overdue.setVisibility(View.VISIBLE);
                 break;
 

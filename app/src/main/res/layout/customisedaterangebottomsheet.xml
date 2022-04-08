@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:padding="3dp"
+        android:src="@drawable/arrow_round_back" />
+
+    <TextView
+        android:id="@+id/selectdate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/backImg"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/backImg"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Select Custom Range"
+        android:textColor="#191919"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/from_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backImg"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="From"
+        android:textColor="#636363" />
+
+    <TextView
+        android:id="@+id/to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/from_tv"
+        android:layout_alignBottom="@id/from_tv"
+        android:layout_marginStart="150dp"
+        android:layout_toEndOf="@id/from_tv"
+        android:fontFamily="@font/roboto_bold"
+        android:text="To"
+        android:textColor="#636363" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Duedate_Tl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/from_tv"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:focusableInTouchMode="false"
+        android:textColorHint="#AEAEAE"
+        app:boxStrokeColor="#E6E6E6"
+        app:endIconMode="custom"
+        app:hintTextColor="#AEAEAE">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/startdate_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Select date"
+            android:inputType="date"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/dashTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#191919"
+        android:textSize="12sp"
+        android:layout_toEndOf="@id/Duedate_Tl"
+         android:layout_marginTop="155dp"
+       />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/todate_tv"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/from_tv"
+        android:layout_toEndOf="@+id/dashTV"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="24dp"
+        android:focusableInTouchMode="false"
+        android:textColorHint="#AEAEAE"
+        app:boxStrokeColor="#E6E6E6"
+        app:endIconMode="custom"
+        app:hintTextColor="#AEAEAE">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enddate_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Select date"
+            android:inputType="date"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CalendarView
+        android:id="@+id/calander_view_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:focusedMonthDateColor="#594099"
+        android:padding="1dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelbtn"
+        android:layout_width="114dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/calander_view_two"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/border4"
+        android:fontFamily="@font/roboto_bold"
+        android:text="CANCEL"
+        android:textColor="#636363"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/apply_btn"
+        android:layout_width="118dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/calander_view_two"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/cancelbtn"
+        android:background="@drawable/border10"
+        android:fontFamily="@font/roboto_bold"
+        android:text="APPLY RANGE"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+
+
+
+</RelativeLayout>

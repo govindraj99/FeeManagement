@@ -1,6 +1,7 @@
 package com.example.fee_management_new.Adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivitesRecentAdapter.AllActivityRecyclerViewHolder> {
     Context context;
     ArrayList<RecentActivitiesone> Allactivitylist;
-
+    private static final String TAG = "AllActivitesRecentAdapt";
 
     public AllActivitesRecentAdapter(Context context, ArrayList<RecentActivitiesone> allactivitylist) {
         this.context = context;
@@ -28,7 +29,7 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
     @NonNull
     @Override
     public AllActivityRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_activity_recyclerview_card,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_activity_recyclerview_card, parent, false);
         AllActivityRecyclerViewHolder allActivityRecyclerViewHolder = new AllActivityRecyclerViewHolder(view);
         return allActivityRecyclerViewHolder;
     }
@@ -42,24 +43,44 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
         holder.AllactivityRVDescription.setText(currentModel.getNote());
         holder.AllactivityRVSection.setText(currentModel.getSection());
         holder.AllactivityRVAmount.setText(new StringBuilder().append("\u20B9 ").append(currentModel.getAmount()).toString());
-        switch (currentModel.getStatus()){
+        Log.i(TAG, "onBindViewHolder: "+currentModel.getStatus());
+        switch (currentModel.getStatus()) {
             case "Paid":
                 holder.AllactivityPaid.setVisibility(View.VISIBLE);
+                holder.AllactivityPending.setVisibility(View.GONE);
+                holder.AllactivityCancelled.setVisibility(View.GONE);
+                holder.Allactivityrefund.setVisibility(View.GONE);
+                holder.AllactivityOverdue.setVisibility(View.GONE);
                 break;
             case "Pending":
+                holder.AllactivityPaid.setVisibility(View.GONE);
                 holder.AllactivityPending.setVisibility(View.VISIBLE);
+                holder.AllactivityCancelled.setVisibility(View.GONE);
+                holder.Allactivityrefund.setVisibility(View.GONE);
+                holder.AllactivityOverdue.setVisibility(View.GONE);
                 break;
             case "Cancelled":
+                holder.AllactivityPaid.setVisibility(View.GONE);
+                holder.AllactivityPending.setVisibility(View.GONE);
                 holder.AllactivityCancelled.setVisibility(View.VISIBLE);
+                holder.Allactivityrefund.setVisibility(View.GONE);
+                holder.AllactivityOverdue.setVisibility(View.GONE);
                 break;
             case "Refund":
+                holder.AllactivityPaid.setVisibility(View.GONE);
+                holder.AllactivityPending.setVisibility(View.GONE);
+                holder.AllactivityCancelled.setVisibility(View.GONE);
                 holder.Allactivityrefund.setVisibility(View.VISIBLE);
+                holder.AllactivityOverdue.setVisibility(View.GONE);
                 break;
             case "Overdue":
+                holder.AllactivityPaid.setVisibility(View.GONE);
+                holder.AllactivityPending.setVisibility(View.GONE);
+                holder.AllactivityCancelled.setVisibility(View.GONE);
+                holder.Allactivityrefund.setVisibility(View.GONE);
                 holder.AllactivityOverdue.setVisibility(View.VISIBLE);
                 break;
         }
-
 
 
     }
@@ -70,8 +91,8 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
     }
 
 
-    public class AllActivityRecyclerViewHolder extends RecyclerView.ViewHolder{
-        TextView AllactivityRVName,AllactivityRVStd,AllactivityRVSection,AllactivityRVAmount,AllactivityRVDescription,AllactivityRVDate,AllactivityPending,Allactivityrefund,AllactivityCancelled,AllactivityPaid,AllactivityOverdue;
+    public class AllActivityRecyclerViewHolder extends RecyclerView.ViewHolder {
+        TextView AllactivityRVName, AllactivityRVStd, AllactivityRVSection, AllactivityRVAmount, AllactivityRVDescription, AllactivityRVDate, AllactivityPending, Allactivityrefund, AllactivityCancelled, AllactivityPaid, AllactivityOverdue;
 
 
         public AllActivityRecyclerViewHolder(@NonNull View itemView) {
@@ -87,7 +108,6 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
             AllactivityPaid = itemView.findViewById(R.id.all_activity_paid);
             AllactivityOverdue = itemView.findViewById(R.id.all_activity_overdue);
             AllactivityRVDate = itemView.findViewById(R.id.all_activityRVdate);
-
 
 
         }

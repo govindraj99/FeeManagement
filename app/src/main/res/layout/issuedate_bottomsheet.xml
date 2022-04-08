@@ -13,6 +13,7 @@
         android:fontFamily="@font/roboto_bold"
         android:layout_marginTop="55dp"/>
     <TextView
+        android:id="@+id/today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Today"
@@ -21,6 +22,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"/>
     <TextView
+        android:id="@+id/yesterdaytv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Yesterday"
@@ -29,6 +31,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"/>
     <TextView
+        android:id="@+id/this_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This month"
@@ -37,6 +40,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"/>
     <TextView
+        android:id="@+id/past_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Past month"
@@ -45,6 +49,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"/>
     <TextView
+        android:id="@+id/past_three_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Past 3 months"
@@ -53,6 +58,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"/>
     <TextView
+        android:id="@+id/customizeDate_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Customise date range"

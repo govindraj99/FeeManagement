@@ -56,6 +56,13 @@ public interface ApiService {
     @Headers({token, link})
     @GET("feev2/transactions-by-user/{stdId}/{userId}")
     Call<List<TransactionByAUserResponse>> TRANSACTION_BY_A_USER_RESPONSE_CALL(@Path("stdId") int stdID, @Path("userId") int userId);
+    @Headers({token,link})
+    @GET("feev2/transaction/{id}")
+    Call<PaymentRequestDetailsTwoResponse> PAYMENT_REQUEST_DETAILS_TWO_RESPONSE_CALL(@Path("id") int id);
+
+    @Headers({token,link})
+    @GET("feev2/allTransactions")
+    Call<GetAllTransactionResponse> paidTransactions(@QueryMap Map<String, String> params);
 
     @Headers({token,link})
     @POST("feev2/update-offline-transactions")

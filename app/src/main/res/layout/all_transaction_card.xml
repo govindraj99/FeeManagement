@@ -80,45 +80,45 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Monthlyfee_TV"
+                android:id="@+id/notetv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Amount_transac"
-                android:layout_marginBottom="12dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
                 android:text="Monthly fee"
                 android:textColor="#AEAEAE"
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/hifen_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/Monthlyfee_TV"
-                android:layout_marginStart="2dp"
-                android:layout_toRightOf="@id/Monthlyfee_TV"
-                android:text="-"
-                android:textColor="#AEAEAE" />
+<!--            <TextView-->
+<!--                android:id="@+id/hifen_tv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignTop="@id/Monthlyfee_TV"-->
+<!--                android:layout_marginStart="2dp"-->
+<!--                android:layout_toRightOf="@id/Monthlyfee_TV"-->
+<!--                android:text="-"-->
+<!--                android:textColor="#AEAEAE" />-->
 
-            <TextView
-                android:id="@+id/May_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/hifen_tv"
-                android:layout_marginStart="2dp"
-                android:layout_toRightOf="@id/hifen_tv"
-                android:text="May"
-                android:textColor="#AEAEAE"
-                android:textSize="15sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/May_tv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignBottom="@id/hifen_tv"-->
+<!--                android:layout_marginStart="2dp"-->
+<!--                android:layout_toRightOf="@id/hifen_tv"-->
+<!--                android:text="May"-->
+<!--                android:textColor="#AEAEAE"-->
+<!--                android:textSize="15sp" />-->
 
             <TextView
                 android:id="@+id/dot_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/May_tv"
+                android:layout_alignBottom="@id/notetv"
                 android:layout_marginStart="8dp"
-                android:layout_toRightOf="@id/May_tv"
+                android:layout_toRightOf="@id/notetv"
                 android:text="\u25cf"
                 android:textColor="#AEAEAE" />
 
@@ -149,7 +149,7 @@
 <!--                android:textColor="#AEAEAE" />-->
 
             <TextView
-                android:id="@+id/Pendin_TV"
+                android:id="@+id/offline_tv"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/ElizaImg"
@@ -166,7 +166,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Overdue_TV"
+                android:id="@+id/online_tv"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/ElizaImg"
@@ -178,6 +178,7 @@
                 android:text="ONLINE"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
+                android:visibility="gone"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/pdt_discounttitle"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="8dp"
+        android:text="Discount"
+        android:textColor="#1089FF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="-\u20B9"
+        android:textColor="#1089FF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/pdt_discountamount"
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Add"
+        android:textColor="#1089FF"
+        android:textSize="14sp" />
+
+</LinearLayout>

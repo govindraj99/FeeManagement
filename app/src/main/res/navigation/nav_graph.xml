@@ -134,21 +134,22 @@
     </fragment>
     <fragment
         android:id="@+id/integeratedBatchAFragment"
-        android:name="com.example.fee_management_new.Fragment.IntegeratedBatchAFragment"
-        android:label="I {std} - {section}"
+        android:name="com.example.fee_management_new.IntegeratedBatchAFragment"
+        android:label=" {std} - {section}"
         tools:layout="@layout/fragment_integerated_batch_a">
+        <action
+            android:id="@+id/action_integeratedBatchAFragment_to_allActivitiesFragment"
+            app:destination="@id/allActivitiesFragment" />
         <argument
-            android:name="id"
-            app:argType="integer" />
+            android:name="section"
+            app:argType="string"
+            />
         <argument
             android:name="std"
             app:argType="string" />
         <argument
-            android:name="section"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_integeratedBatchAFragment_to_allActivitiesFragment"
-            app:destination="@id/allActivitiesFragment" />
+            android:name="id"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/generatePaymentFragment2"
@@ -168,5 +169,22 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_allActivitiesFragment_to_paymentRequesrtDetailsTwoFragment"
+            app:destination="@id/paymentRequesrtDetailsTwoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/paymentRequesrtDetailsTwoFragment"
+        android:name="com.example.fee_management_new.PaymentRequesrtDetailsTwoFragment"
+        android:label="fragment_payment_requesrt_details_two"
+        tools:layout="@layout/fragment_payment_requesrt_details_two" >
+        <argument
+            android:name="uid"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatePaymentRequestTwoFragment"
+        android:name="com.example.fee_management_new.GeneratePaymentRequestTwoFragment"
+        android:label="fragment_generate_payment_request_two"
+        tools:layout="@layout/fragment_generate_payment_request_two" />
 </navigation>
