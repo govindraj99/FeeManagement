@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AddOfflinePayment">
+    tools:context=".Fragment.AddOfflinePayment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,10 +23,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
-                android:textStyle="bold"
+                android:text="Class"
                 android:textColor="#636363"
                 android:textSize="12dp"
-                android:text="Class" />
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
@@ -37,7 +39,7 @@
                 app:boxStrokeColor="#E6E6E6">
 
                 <AutoCompleteTextView
-                    android:id="@+id/auto_complete_txt"
+                    android:id="@+id/selectClassET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
@@ -45,7 +47,6 @@
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <TextView
@@ -60,9 +61,7 @@
                 android:textSize="12sp"
 
 
-
                 />
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -76,14 +75,13 @@
                 app:startIconDrawable="@drawable/search_img">
 
 
-
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
+                    android:id="@+id/searchName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Search by name/mobile"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <TextView
@@ -97,91 +95,16 @@
                 android:textColor="#191919"
                 android:textSize="14sp" />
 
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp">
-
-
-
-                <TextView
-                    android:id="@+id/Amt_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:padding="3dp"
-                    android:text="Amount"
-                    android:textColor="#636363"
-                    android:textSize="12sp" />
-
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Amount_Tl"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="168dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Amt_tv"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#FFFFFF"
-                    app:boxStrokeColor="#E6E6E6"
-                    app:hintTextColor="#AEAEAE">
-
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="\u20B9"
-                        android:textSize="14sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Duedate_Tl"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="174dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Amt_tv"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_toRightOf="@id/Amount_Tl"
-                    android:textColorHint="#AEAEAE"
-                    app:boxStrokeColor="#E6E6E6"
-                    app:endIconDrawable="@drawable/ic_calendar"
-                    app:endIconMode="custom"
-                    app:hintTextColor="#AEAEAE">
-
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Set due date"
-                        android:textSize="14sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@id/Duedate_Tl"
-                    android:layout_alignStart="@id/Duedate_Tl"
-                    android:layout_alignBottom="@id/Amt_tv"
-                    android:layout_toRightOf="@id/Amount_Tl"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Due date"
-                    android:textColor="#636363" />
-            </RelativeLayout>
-
-
+            <CheckBox
+                android:id="@+id/createNewPaymentCB"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:text="Create new payment"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="#191919"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -194,26 +117,101 @@
                 android:textColor="#636363"
                 android:textSize="12sp" />
 
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/description_Tl"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+                app:boxStrokeColor="#E6E6E6"
+                app:hintTextColor="#AEAEAE">
+
+                <AutoCompleteTextView
+                    android:id="@+id/descriptionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter description"
+                    android:paddingVertical="13dp"
+                    android:paddingStart="18dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/Amt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="3dp"
+                android:text="Amount"
+                android:textColor="#636363"
+                android:textSize="12sp" />
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Amount_Tl"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Amt_tv"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="#FFFFFF"
+                app:boxStrokeColor="#E6E6E6"
+                app:hintTextColor="#AEAEAE">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="\u20B9     Enter amount"
+                    android:paddingVertical="13dp"
+                    android:paddingStart="18dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="3dp"
+                android:textColor="#636363"
+                android:textSize="12sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Amt_tv"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
 
                 android:backgroundTint="#FFFFFF"
                 app:boxStrokeColor="#E6E6E6"
                 app:hintTextColor="#AEAEAE">
 
-                <com.google.android.material.textfield.TextInputEditText
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/dateET"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:hint="Enter description"
+                    android:layout_height="wrap_content"
+                    android:hint="Select A Date"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:paddingVertical="13dp"
+                    android:paddingEnd="12dp"
+                    android:focusable="false"
+                    android:paddingStart="18dp"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -222,9 +220,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="18dp"
-                android:textColor="#636363"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Amount details"
+                android:textColor="#636363"
                 android:textSize="12sp" />
 
             <androidx.cardview.widget.CardView
@@ -243,8 +241,8 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -266,6 +264,7 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/feeAmtTV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
@@ -277,10 +276,10 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
-                        android:visibility="gone"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="18dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -306,9 +305,10 @@
                             android:layout_marginStart="24dp"
                             android:fontFamily="@font/roboto_medium"
                             android:text="0.00"
-                            android:visibility="gone"
                             android:textColor="#1089FF"
-                            android:textSize="14sp" />
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
                         <TextView
                             android:id="@+id/Add_Tv"
                             android:layout_width="wrap_content"
@@ -319,10 +319,11 @@
                             android:textColor="#1089FF"
                             android:textSize="14sp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -349,16 +350,17 @@
                             android:layout_marginStart="24dp"
                             android:fontFamily="@font/roboto_medium"
                             android:text="0.00"
-                            android:visibility="gone"
                             android:textColor="#1089FF"
-                            android:textSize="14sp" />
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
                         <TextView
-                            android:id="@+id/DiscountAmt_Tv"
+                            android:id="@+id/totalDiscountTV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="Add"
+                            android:text="0.00"
                             android:textColor="#1089FF"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -388,6 +390,7 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/totalAdditionTV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
@@ -396,6 +399,7 @@
                             android:textColor="#FFA931"
                             android:textSize="14sp" />
                     </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -430,6 +434,7 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/totalPayableTV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
@@ -438,6 +443,7 @@
                             android:textColor="#191919"
                             android:textSize="14sp" />
                     </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -450,7 +456,6 @@
             </androidx.cardview.widget.CardView>
 
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -461,7 +466,6 @@
                 android:textSize="12sp" />
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -469,58 +473,66 @@
                 android:orientation="horizontal">
 
 
-
-
-                <Button
-                    android:id="@+id/button3"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCash"
                     android:layout_width="80dp"
-                    android:background="@drawable/roundbutton"
                     android:layout_height="35dp"
                     android:layout_marginStart="24dp"
-                    android:text="Cash" />
+                    android:background="@drawable/buttonchange"
+                    android:text="Cash"
+                    android:textColor="@color/white" />
 
 
-
-                <Button
-                    android:id="@+id/button2"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDebitCredit"
                     android:layout_width="154dp"
-                    android:background="@drawable/roundbutton"
                     android:layout_height="35dp"
                     android:layout_marginStart="24dp"
-                    android:text="Debit/Credit card" />
+                    android:background="@drawable/border4"
+                    android:text="Debit/Credit card"
+                    android:textColor="#AEAEAE" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpi"
                     android:layout_width="80dp"
-                    android:background="@drawable/roundbutton"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:text="UPI" />
+                    android:background="@drawable/border4"
+                    android:text="UPI"
+                    android:textColor="#AEAEAE" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginBottom="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBankTransfer"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/roundbutton"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:text="Bank Tranfer" />
+                    android:background="@drawable/border4"
+                    android:text="Bank Transfer"
+                    android:textColor="#AEAEAE" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCheque"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/roundbutton"
                     android:layout_height="wrap_content"
-                    android:text="Cheque" />
+                    android:background="@drawable/border4"
+                    android:text="Cheque"
+                    android:textColor="#AEAEAE" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/transactionLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -533,29 +545,30 @@
                     android:textSize="12sp" />
 
                 <EditText
+                    android:id="@+id/transactionIDET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/stroke_box"
-                    android:padding="10dp"
-                    android:hint="Enter transaction ID"
-                    android:textColorHint="#AEAEAE"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:layout_marginHorizontal="18dp"
-                    android:layout_marginVertical="12dp"/>
+                    android:layout_marginVertical="12dp"
+                    android:background="@drawable/stroke_box"
+                    android:hint="Enter transaction ID"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#AEAEAE"
+                    android:textStyle="bold" />
             </LinearLayout>
-
 
 
         </LinearLayout>
     </ScrollView>
+
     <Button
-        android:layout_width="171dp"
         android:id="@+id/send_request_btn"
+        android:layout_width="171dp"
         android:layout_height="44dp"
         android:layout_gravity="bottom|center_horizontal"
         android:background="@drawable/border5"
-        android:enabled="false"
+        android:enabled="true"
         android:text="Add" />
 
 

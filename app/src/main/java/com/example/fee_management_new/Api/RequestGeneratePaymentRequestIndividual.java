@@ -6,14 +6,14 @@ public class RequestGeneratePaymentRequestIndividual {
     public int amount;
     public String note;
     public String paymentType;
-    public Object paymentMethod;
+    public String paymentMethod;
     public String discountDetails;
     public Object additionDetails;
     public String dueDate;
     public ArrayList<Integer> userIds;
     public int standardId;
 
-    public RequestGeneratePaymentRequestIndividual(int amount, String note, String paymentType, Object paymentMethod, String discountDetails, Object additionDetails, String dueDate, ArrayList<Integer> userIds, int standardId) {
+    public RequestGeneratePaymentRequestIndividual(int amount, String note, String paymentType, String paymentMethod, String discountDetails, Object additionDetails, String dueDate, ArrayList<Integer> userIds, int standardId) {
         this.amount = amount;
         this.note = note;
         this.paymentType = paymentType;
@@ -37,7 +37,7 @@ public class RequestGeneratePaymentRequestIndividual {
         return paymentType;
     }
 
-    public Object getPaymentMethod() {
+    public String getPaymentMethod() {
         return paymentMethod;
     }
 

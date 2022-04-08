@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import static androidx.fragment.app.FragmentManager.TAG;
 
@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fee_management_new.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 

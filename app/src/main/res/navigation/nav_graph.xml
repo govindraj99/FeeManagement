@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fee"
-        android:name="com.example.fee_management_new.fee"
+        android:name="com.example.fee_management_new.Fragment.fee"
         android:label="fragment_fee"
         tools:layout="@layout/fragment_fee" >
         <action
@@ -20,32 +20,32 @@
     </fragment>
     <fragment
         android:id="@+id/library2"
-        android:name="com.example.fee_management_new.library"
+        android:name="com.example.fee_management_new.Fragment.library"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" />
     <fragment
         android:id="@+id/more2"
-        android:name="com.example.fee_management_new.more"
+        android:name="com.example.fee_management_new.Fragment.more"
         android:label="fragment_more"
         tools:layout="@layout/fragment_more" />
     <fragment
         android:id="@+id/schedule2"
-        android:name="com.example.fee_management_new.schedule"
+        android:name="com.example.fee_management_new.Fragment.schedule"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" />
     <fragment
         android:id="@+id/settings2"
-        android:name="com.example.fee_management_new.settings"
+        android:name="com.example.fee_management_new.Fragment.settings"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/test2"
-        android:name="com.example.fee_management_new.test"
+        android:name="com.example.fee_management_new.Fragment.test"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" />
     <fragment
         android:id="@+id/activateFrag"
-        android:name="com.example.fee_management_new.ActivateFrag"
+        android:name="com.example.fee_management_new.Fragment.ActivateFrag"
         android:label="fragment_activate"
         tools:layout="@layout/fragment_activate" >
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/overview"
-        android:name="com.example.fee_management_new.Overview"
+        android:name="com.example.fee_management_new.Fragment.Overview"
         android:label="Overview"
         tools:layout="@layout/fragment_overview">
         <argument
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/generatePaymentRequest"
-        android:name="com.example.fee_management_new.GeneratePaymentRequest"
+        android:name="com.example.fee_management_new.Fragment.GeneratePaymentRequest"
         android:label="Generate Payment Request"
         tools:layout="@layout/fragment_generate_payment_request" >
         <action
@@ -101,17 +101,17 @@
     </fragment>
     <fragment
         android:id="@+id/paymentRequestDetails"
-        android:name="com.example.fee_management_new.PaymentRequestDetails"
+        android:name="com.example.fee_management_new.Fragment.PaymentRequestDetails"
         android:label=" Payment Request Details"
         tools:layout="@layout/fragment_payment_request_details" />
     <fragment
         android:id="@+id/addOfflinePayment"
-        android:name="com.example.fee_management_new.AddOfflinePayment"
+        android:name="com.example.fee_management_new.Fragment.AddOfflinePayment"
         android:label="fragment_add_offline_payment"
         tools:layout="@layout/fragment_add_offline_payment" />
     <fragment
         android:id="@+id/transaction"
-        android:name="com.example.fee_management_new.Transaction"
+        android:name="com.example.fee_management_new.Fragment.Transaction"
         android:label="fragment_transaction"
         tools:layout="@layout/fragment_transaction" >
         <action
@@ -120,12 +120,12 @@
     </fragment>
     <fragment
         android:id="@+id/invoiceFragment"
-        android:name="com.example.fee_management_new.InvoiceFragment"
+        android:name="com.example.fee_management_new.Fragment.InvoiceFragment"
         android:label="Invoice"
         tools:layout="@layout/fragment_invoice" />
     <fragment
         android:id="@+id/allStudentFragment"
-        android:name="com.example.fee_management_new.AllStudentFragment"
+        android:name="com.example.fee_management_new.Fragment.AllStudentFragment"
         android:label="All students"
         tools:layout="@layout/fragment_all_student" >
         <action
@@ -134,7 +134,7 @@
     </fragment>
     <fragment
         android:id="@+id/integeratedBatchAFragment"
-        android:name="com.example.fee_management_new.IntegeratedBatchAFragment"
+        android:name="com.example.fee_management_new.Fragment.IntegeratedBatchAFragment"
         android:label="I {std} - {section}"
         tools:layout="@layout/fragment_integerated_batch_a">
         <argument
@@ -152,17 +152,17 @@
     </fragment>
     <fragment
         android:id="@+id/generatePaymentFragment2"
-        android:name="com.example.fee_management_new.GeneratePaymentFragment2"
+        android:name="com.example.fee_management_new.Fragment.GeneratePaymentFragment2"
         android:label="fragment_generate_payment2"
         tools:layout="@layout/fragment_generate_payment2" />
     <fragment
         android:id="@+id/allActivityRecentFragment"
-        android:name="com.example.fee_management_new.AllActivityRecentFragment"
+        android:name="com.example.fee_management_new.Fragment.AllActivityRecentFragment"
         android:label="All activites"
         tools:layout="@layout/fragment_all_activity_alltransaction" />
     <fragment
         android:id="@+id/allActivitiesFragment"
-        android:name="com.example.fee_management_new.AllActivitiesTwoFragment"
+        android:name="com.example.fee_management_new.Fragment.AllActivitiesTwoFragment"
         android:label="fragment_all_activities"
         tools:layout="@layout/fragment_all_activities" >
         <argument

@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class schedule extends Fragment {
+import com.example.fee_management_new.R;
+
+
+public class settings extends Fragment {
 View view;
-    public schedule() {
+
+    public settings() {
         // Required empty public constructor
     }
-
 
 
 
@@ -27,7 +30,7 @@ View view;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_schedule, container, false);
+        view = inflater.inflate(R.layout.fragment_settings, container, false);
         return view;
     }
 }

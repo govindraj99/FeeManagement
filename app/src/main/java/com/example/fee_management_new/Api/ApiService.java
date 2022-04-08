@@ -1,7 +1,6 @@
 package com.example.fee_management_new.Api;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +10,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
@@ -49,10 +49,20 @@ public interface ApiService {
     @GET("feev2/allTransactions")
     Call<GetAllTransactionResponse> AllActivityTransactions(@Query("section[]") int sectionID);
 
-    @Headers({token,link})
+    @Headers({token, link})
     @GET("feev2/getUser")
     Call<List<GetUserInAClassResponse>> GET_USER_IN_A_CLASS_RESPONSE_CALL(@Query("standardId") int stdId, @Query("search") String search);
 
+    @Headers({token, link})
+    @GET("feev2/transactions-by-user/{stdId}/{userId}")
+    Call<List<TransactionByAUserResponse>> TRANSACTION_BY_A_USER_RESPONSE_CALL(@Path("stdId") int stdID, @Path("userId") int userId);
 
+    @Headers({token,link})
+    @POST("feev2/update-offline-transactions")
+    Call<UpdateOfflineTransactionResponse> UPDATE_OFFLINE_TRANSACTION_RESPONSE_CALL(@Body UpdateOfflineTransactionRequest updateOfflineTransactionRequest);
+
+    @Headers({token,link})
+    @POST("feev2")
+    Call<GenerateNewOfflinePaymentResponse> GENERATE_NEW_OFFLINE_PAYMENT_RESPONSE_CALL(@Body GenerateNewOfflinePaymentRequest generateNewOfflinePaymentRequest);
 }
 

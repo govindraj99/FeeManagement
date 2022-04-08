@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.app.Notification;
 import android.os.Bundle;
@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.fee_management_new.R;
 
 
 public class fee extends Fragment {

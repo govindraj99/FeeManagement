@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fee_management_new.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BottomsheetCalender#newInstance} factory method to
+ * Use the {@link PaymentRequestDetails#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BottomsheetCalender extends Fragment {
+public class PaymentRequestDetails extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class BottomsheetCalender extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BottomsheetCalender() {
+    public PaymentRequestDetails() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class BottomsheetCalender extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BottomsheetCalender.
+     * @return A new instance of fragment PaymentRequestDetails.
      */
     // TODO: Rename and change types and number of parameters
-    public static BottomsheetCalender newInstance(String param1, String param2) {
-        BottomsheetCalender fragment = new BottomsheetCalender();
+    public static PaymentRequestDetails newInstance(String param1, String param2) {
+        PaymentRequestDetails fragment = new PaymentRequestDetails();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class BottomsheetCalender extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottomsheet_calender, container, false);
+        return inflater.inflate(R.layout.fragment_payment_request_details, container, false);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fee_management_new.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PaymentRequestDetails#newInstance} factory method to
+ * Use the {@link InvoiceFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PaymentRequestDetails extends Fragment {
+public class InvoiceFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class PaymentRequestDetails extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PaymentRequestDetails() {
+    public InvoiceFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class PaymentRequestDetails extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PaymentRequestDetails.
+     * @return A new instance of fragment InvoiceFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PaymentRequestDetails newInstance(String param1, String param2) {
-        PaymentRequestDetails fragment = new PaymentRequestDetails();
+    public static InvoiceFragment newInstance(String param1, String param2) {
+        InvoiceFragment fragment = new InvoiceFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class PaymentRequestDetails extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_payment_request_details, container, false);
+        return inflater.inflate(R.layout.fragment_invoice, container, false);
     }
 }

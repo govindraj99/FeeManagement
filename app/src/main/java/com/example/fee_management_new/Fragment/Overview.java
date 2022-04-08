@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.fee_management_new.R;
+import com.example.fee_management_new.XYMarkerView;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -73,8 +75,8 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_overview, container, false);
-        String name = com.example.fee_management_new.OverviewArgs.fromBundle(getArguments()).getOverviewdata();
-        String Amt = com.example.fee_management_new.OverviewArgs.fromBundle(getArguments()).getAmount();
+        String name = com.example.fee_management_new.Fragment.OverviewArgs.fromBundle(getArguments()).getOverviewdata();
+        String Amt = com.example.fee_management_new.Fragment.OverviewArgs.fromBundle(getArguments()).getAmount();
         String Payment_Req = OverviewArgs.fromBundle(getArguments()).getPaymentRequest();
         TextView No_of_payments = view.findViewById(R.id.No_of_Payments_Requested_overview);
         TextView Total_Amt = view.findViewById(R.id.total_amt_overview);
@@ -199,7 +201,7 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        String name = com.example.fee_management_new.OverviewArgs.fromBundle(getArguments()).getOverviewdata();
+        String name = com.example.fee_management_new.Fragment.OverviewArgs.fromBundle(getArguments()).getOverviewdata();
         Noofpayoverview = view.findViewById(R.id.No_of_Payments_Requested_overview);
         Noofpayoverview.setText(name);
 

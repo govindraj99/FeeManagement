@@ -1,23 +1,19 @@
 package com.example.fee_management_new.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavDirections;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fee_management_new.ActivateFragDirections;
-import com.example.fee_management_new.InvoiceFragment;
+import com.example.fee_management_new.Fragment.ActivateFragDirections;
+import com.example.fee_management_new.Fragment.InvoiceFragment;
 import com.example.fee_management_new.Modalclass.TransactionData;
 import com.example.fee_management_new.R;
 

@@ -1,4 +1,4 @@
-package com.example.fee_management_new;
+package com.example.fee_management_new.Fragment;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -22,6 +22,7 @@ import com.example.fee_management_new.Adapters.SettlementsAdapter;
 import com.example.fee_management_new.Adapters.TransactionAdapter;
 import com.example.fee_management_new.Modalclass.SettelmentModel;
 import com.example.fee_management_new.Modalclass.TransactionData;
+import com.example.fee_management_new.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
