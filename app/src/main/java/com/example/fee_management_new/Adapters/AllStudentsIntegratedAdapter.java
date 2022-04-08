@@ -25,7 +25,7 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
     Context context;
     FragmentManager fragmentManager;
     ArrayList<String> name=new ArrayList<>();
-    AdapterView.OnItemClickListener onItemClickListener;
+    private  OnItemClickListener onItemClickListener;
     private static final String baseUrlForImages = "https://s3.ap-south-1.amazonaws.com/test.files.classroom.digital/";
 
     public AllStudentsIntegratedAdapter(ArrayList<AllStudentsIntegratedModal> allStudentsModal, Context context, FragmentManager fragmentManager) {
@@ -50,13 +50,10 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
         holder.rollNoTV.setText(currentData.getRollno());
         Glide.with(context).load(baseUrlForImages+currentData.getImage()).into(holder.Image);
         holder.namesItegrate.setText(currentData.getName());
-        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                name.add(currentData.getName());
-            }
-        });
 
+    }
+    public interface OnItemClickListener{
+        void onItemClickListener(int position);
     }
 
     @Override
@@ -69,7 +66,7 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
         CheckBox checkBox;
         ImageView Image;
 
-        public AllStudentsIntegratedViewHolder(@NonNull View itemView, AdapterView.OnItemClickListener onItemClickListener) {
+        public AllStudentsIntegratedViewHolder(@NonNull View itemView,OnItemClickListener listener) {
             super(itemView);
             namesItegrate = itemView.findViewById(R.id.namesintegrate);
             rollNoTV = itemView.findViewById(R.id.rollNo_tv);
@@ -79,12 +76,19 @@ public class AllStudentsIntegratedAdapter extends RecyclerView.Adapter<AllStuden
             checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if (b) {
-                        namesItegrate.getText().toString();
 
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onItemClickListener(position);
+
+                        }
                     }
                 }
             });
         }
+    }
+    public void setOnItemClickListener(OnItemClickListener listener){
+        onItemClickListener = listener;
     }
 }
