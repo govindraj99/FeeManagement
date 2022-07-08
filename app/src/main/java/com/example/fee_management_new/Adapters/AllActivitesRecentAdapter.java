@@ -8,17 +8,25 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.fee_management_new.Fragment.AllActivityRecentFragmentDirections;
 import com.example.fee_management_new.Modalclass.AllActivitesTwoModal;
 import com.example.fee_management_new.Modalclass.RecentActivitiesone;
 import com.example.fee_management_new.R;
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 
 public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivitesRecentAdapter.AllActivityRecyclerViewHolder> {
     Context context;
+    NavController navController;
     ArrayList<RecentActivitiesone> Allactivitylist;
+    static final String baseUrlForImages = "https://s3.ap-south-1.amazonaws.com/test.files.classroom.digital/";
     private static final String TAG = "AllActivitesRecentAdapt";
 
     public AllActivitesRecentAdapter(Context context, ArrayList<RecentActivitiesone> allactivitylist) {
@@ -37,12 +45,24 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
     @Override
     public void onBindViewHolder(@NonNull AllActivityRecyclerViewHolder holder, int position) {
         RecentActivitiesone currentModel = Allactivitylist.get(position);
-        holder.AllactivityRVName.setText(currentModel.getName());
+        holder.AllactivityRVName.setText(currentModel.getName().trim());
         holder.AllactivityRVStd.setText(currentModel.getStd());
         holder.AllactivityRVDate.setText(currentModel.getDate());
-        holder.AllactivityRVDescription.setText(currentModel.getNote());
+        holder.AllactivityRVDescription.setText(currentModel.getNote().trim());
         holder.AllactivityRVSection.setText(currentModel.getSection());
         holder.AllactivityRVAmount.setText(new StringBuilder().append("\u20B9 ").append(currentModel.getAmount()).toString());
+        Glide.with(context).load(baseUrlForImages+currentModel.getImage()).into(holder.all_ActivityrvImage);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int idtosend = currentModel.getId();
+                Log.i(TAG, "onClick: IIiiiidddddd  "+ idtosend);
+                NavDirections action = AllActivityRecentFragmentDirections.actionAllActivityRecentFragmentToPaymentRequestDetailsThreeFragment(idtosend);
+                Navigation.findNavController(view).navigate(action);
+            }
+        });
+
+
         Log.i(TAG, "onBindViewHolder: "+currentModel.getStatus());
         switch (currentModel.getStatus()) {
             case "Paid":
@@ -93,6 +113,7 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
 
     public class AllActivityRecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView AllactivityRVName, AllactivityRVStd, AllactivityRVSection, AllactivityRVAmount, AllactivityRVDescription, AllactivityRVDate, AllactivityPending, Allactivityrefund, AllactivityCancelled, AllactivityPaid, AllactivityOverdue;
+        ShapeableImageView all_ActivityrvImage;
 
 
         public AllActivityRecyclerViewHolder(@NonNull View itemView) {
@@ -108,6 +129,7 @@ public class AllActivitesRecentAdapter extends RecyclerView.Adapter<AllActivites
             AllactivityPaid = itemView.findViewById(R.id.all_activity_paid);
             AllactivityOverdue = itemView.findViewById(R.id.all_activity_overdue);
             AllactivityRVDate = itemView.findViewById(R.id.all_activityRVdate);
+            all_ActivityrvImage = itemView.findViewById(R.id.all_activityRVImage);
 
 
         }

@@ -4,47 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PaymentRequesrtDetailsTwoFragment">
+    tools:context=".Fragment.PaymentRequesrtDetailsTwoFragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <!-- TODO: Update blank fragment layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Requested to"
-                android:padding="5dp"
-                android:textColor="#191919"
-                android:fontFamily="@font/roboto_bold"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="70dp"/>
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="5dp"
+                android:text="Requested to"
+                android:textColor="#191919" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp">
+
                 <ImageView
                     android:id="@+id/pdt_image"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/girl1"
-                    android:layout_marginStart="24dp"/>
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/girl1" />
+
                 <TextView
                     android:id="@+id/pdt_profilename"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/pdt_image"
+                    android:fontFamily="@font/roboto_bold"
                     android:text="Eliza O’Conner"
                     android:textColor="#191919"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_toEndOf="@id/pdt_image"
-                    android:layout_marginStart="12dp"
-                    />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/pdt_std"
@@ -57,192 +60,270 @@
                     android:text="Integrated Batch"
                     android:textColor="#636363"
                     android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/dashtv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/pdt_std"
+                    android:layout_toEndOf="@+id/pdt_std"
+                    android:fontFamily="@font/roboto"
                     android:text=" - "
                     android:textColor="#636363"
-                    android:textSize="12sp"
-                    android:layout_toEndOf="@+id/pdt_std"
-                    android:layout_alignTop="@+id/pdt_std"
-                    android:fontFamily="@font/roboto"/>
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/pdt_section"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A"
-                    android:textColor="#636363"
-                    android:textSize="12sp"
-                    android:layout_toEndOf="@id/dashtv"
                     android:layout_alignTop="@id/dashtv"
                     android:layout_alignBottom="@id/dashtv"
-                    android:fontFamily="@font/roboto"/>
+                    android:layout_toEndOf="@id/dashtv"
+                    android:fontFamily="@font/roboto"
+                    android:text="A"
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/pdt_pending"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="235dp"
-                    android:layout_toRightOf="@id/pdt_image"
+                    android:layout_marginEnd="24dp"
                     android:background="@drawable/border"
-                    android:padding="6dp"
+                    android:padding="4dp"
                     android:text="Pending"
                     android:textAlignment="center"
                     android:textColor="#FFA931"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/pdt_two_paid"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/border2"
+                    android:padding="6dp"
+                    android:text="Paid"
+                    android:textAlignment="center"
+                    android:textColor="#28DF99"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/pdt_two_refund"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/border8"
+                    android:padding="6dp"
+                    android:text="Refunded"
+                    android:textAlignment="center"
+                    android:textColor="#636363"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/pdt_two_overdue"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/border3"
+                    android:padding="6dp"
+                    android:text="Overdue"
+                    android:textAlignment="center"
+                    android:textColor="#FF414D"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/pdt_two_cancelled"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/border8"
+                    android:padding="6dp"
+                    android:text="CANCELLED"
+                    android:textAlignment="center"
+                    android:textColor="#636363"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Details"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:textColor="#191919"
                 android:fontFamily="@font/roboto_bold"
-                android:layout_marginStart="24dp"
-                android:textSize="12sp"
-                />
+                android:text="Details"
+                android:textColor="#191919"
+                android:textSize="12sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="24dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#636363"
-                    android:text="Amount"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/roboto_bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#636363"
-                    android:text="Issue date"
-                    android:padding="2dp"
-                    android:layout_marginStart="145dp"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/roboto_bold"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\u20B9"
-                    android:textSize="14sp"
-                    android:textColor="#191919"
                     android:fontFamily="@font/roboto_bold"
-                    />
+                    android:text="Amount"
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="145dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="2dp"
+                    android:text="Issue date"
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="\u20B9"
+                    android:textColor="#191919"
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/pdt_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#191919"
-                    android:text="200"
                     android:layout_marginStart="10dp"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/roboto_medium"/>
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="200"
+                    android:textColor="#191919"
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/pdt_issuedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="147dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="2dp"
                     android:text="12/01/2022"
                     android:textColor="#191919"
-                    android:textSize="14sp"
-                    android:padding="2dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_marginStart="147dp"/>
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text=","-->
-<!--                    android:fontFamily="@font/roboto_bold"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:padding="2dp"-->
-<!--                    android:textColor="#191919"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="09:34 PM"-->
-<!--                    android:padding="2dp"-->
-<!--                    android:fontFamily="@font/roboto_bold"-->
-<!--                    android:textColor="#191919"-->
-<!--                    android:textSize="14sp"/>-->
+                    android:textSize="14sp" />
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text=","-->
+                <!--                    android:fontFamily="@font/roboto_bold"-->
+                <!--                    android:textSize="14sp"-->
+                <!--                    android:padding="2dp"-->
+                <!--                    android:textColor="#191919"/>-->
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="09:34 PM"-->
+                <!--                    android:padding="2dp"-->
+                <!--                    android:fontFamily="@font/roboto_bold"-->
+                <!--                    android:textColor="#191919"-->
+                <!--                    android:textSize="14sp"/>-->
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="2dp"
                     android:text="Due date"
                     android:textColor="#636363"
-                    android:textSize="12sp"
-                    android:padding="2dp"
-                    android:fontFamily="@font/roboto_bold"/>
+                    android:textSize="12sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Description"
                     android:layout_marginStart="137dp"
-                    android:textColor="#636363"
-                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_bold"
                     android:padding="2dp"
-                    android:fontFamily="@font/roboto_bold"/>
+                    android:text="Description"
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
 
                 android:orientation="horizontal">
+
                 <TextView
+                    android:id="@+id/pdt_duedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pdt_duedate"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="2dp"
                     android:text="12/01/2022"
                     android:textColor="#191919"
-                    android:padding="2dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textSize="14sp"
-                    />
+                    android:textSize="14sp" />
+
                 <TextView
+                    android:id="@+id/pdt_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pdt_description"
-                    android:textSize="14sp"
-                    android:text="Admission Fee"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="#191919"
                     android:layout_marginStart="110dp"
-                    android:paddingHorizontal="2dp"/>
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingHorizontal="2dp"
+                    android:text="Admission Fee"
+                    android:textColor="#191919"
+                    android:textSize="14sp" />
 
             </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#636363"
-                android:text="Amount details"
-                android:textSize="12sp"
-                android:padding="2dp"
-                android:fontFamily="@font/roboto_bold"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginStart="24dp"/>
+                android:fontFamily="@font/roboto_bold"
+                android:padding="2dp"
+                android:text="Amount details"
+                android:textColor="#636363"
+                android:textSize="12sp" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -257,26 +338,33 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/prdt_feeamount_Tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:padding="8dp"
+                            android:padding="6dp"
                             android:text="Fee amount"
                             android:textColor="#191919"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/prdt_feeamt_rupee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="165dp"
+
+                            android:layout_alignTop="@id/prdt_feeamount_Tv"
+                            android:layout_alignBottom="@id/prdt_feeamount_Tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="\u20B9"
                             android:textColor="#191919"
                             android:textSize="14sp" />
@@ -285,63 +373,67 @@
                             android:id="@+id/pdt_feeamount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@+id/prdt_feeamt_rupee"
+                            android:layout_alignBottom="@+id/prdt_feeamt_rupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
                             android:text="0.00"
                             android:textColor="#191919"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:id="@+id/discount_RV"
-                            tools:listitem="@layout/discountdetailrow"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/discountdetailrow" />
 
 
-<!--                        <TextView-->
-<!--                            android:id="@+id/pdt_discounttitle"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:fontFamily="@font/roboto_medium"-->
-<!--                            android:padding="8dp"-->
-<!--                            android:text="Discount"-->
-<!--                            android:textColor="#1089FF"-->
-<!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/pdt_discounttitle"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:fontFamily="@font/roboto_medium"-->
+                        <!--                            android:padding="8dp"-->
+                        <!--                            android:text="Discount"-->
+                        <!--                            android:textColor="#1089FF"-->
+                        <!--                            android:textSize="14sp" />-->
 
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="180dp"-->
-<!--                            android:fontFamily="@font/roboto_bold"-->
-<!--                            android:text="-\u20B9"-->
-<!--                            android:textColor="#1089FF"-->
-<!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="180dp"-->
+                        <!--                            android:fontFamily="@font/roboto_bold"-->
+                        <!--                            android:text="-\u20B9"-->
+                        <!--                            android:textColor="#1089FF"-->
+                        <!--                            android:textSize="14sp" />-->
 
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="24dp"-->
-<!--                            android:fontFamily="@font/roboto_medium"-->
-<!--                            android:text="0.00"-->
-<!--                            android:visibility="gone"-->
-<!--                            android:textColor="#1089FF"-->
-<!--                            android:textSize="14sp" />-->
-<!--                        <TextView-->
-<!--                            android:id="@+id/pdt_discountamount"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="24dp"-->
-<!--                            android:fontFamily="@font/roboto_medium"-->
-<!--                            android:text="Add"-->
-<!--                            android:textColor="#1089FF"-->
-<!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="24dp"-->
+                        <!--                            android:fontFamily="@font/roboto_medium"-->
+                        <!--                            android:text="0.00"-->
+                        <!--                            android:visibility="gone"-->
+                        <!--                            android:textColor="#1089FF"-->
+                        <!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/pdt_discountamount"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="24dp"-->
+                        <!--                            android:fontFamily="@font/roboto_medium"-->
+                        <!--                            android:text="Add"-->
+                        <!--                            android:textColor="#1089FF"-->
+                        <!--                            android:textSize="14sp" />-->
                     </LinearLayout>
 
                     <LinearLayout
@@ -351,42 +443,42 @@
                         android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/additionDetail_RV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/additionDetail_RV"
-                            tools:listitem="@layout/additiondetailrow"/>
+                            tools:listitem="@layout/additiondetailrow" />
 
 
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/pdt_additiontitle"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:fontFamily="@font/roboto_medium"-->
+                        <!--                            android:padding="8dp"-->
+                        <!--                            android:text="Addition"-->
+                        <!--                            android:textColor="#FFA931"-->
+                        <!--                            android:textSize="14sp" />-->
 
-<!--                        <TextView-->
-<!--                            android:id="@+id/pdt_additiontitle"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:fontFamily="@font/roboto_medium"-->
-<!--                            android:padding="8dp"-->
-<!--                            android:text="Addition"-->
-<!--                            android:textColor="#FFA931"-->
-<!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="180dp"-->
+                        <!--                            android:fontFamily="@font/roboto_bold"-->
+                        <!--                            android:text="+\u20B9"-->
+                        <!--                            android:textColor="#FFA931"-->
+                        <!--                            android:textSize="14sp" />-->
 
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="180dp"-->
-<!--                            android:fontFamily="@font/roboto_bold"-->
-<!--                            android:text="+\u20B9"-->
-<!--                            android:textColor="#FFA931"-->
-<!--                            android:textSize="14sp" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/pdt_addition_Amount"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="24dp"-->
-<!--                            android:fontFamily="@font/roboto_medium"-->
-<!--                            android:text="0.00"-->
-<!--                            android:textColor="#FFA931"-->
-<!--                            android:textSize="14sp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/pdt_addition_Amount"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="24dp"-->
+                        <!--                            android:fontFamily="@font/roboto_medium"-->
+                        <!--                            android:text="0.00"-->
+                        <!--                            android:textColor="#FFA931"-->
+                        <!--                            android:textSize="14sp" />-->
                     </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -394,7 +486,7 @@
                         android:layout_marginTop="10dp"
                         android:background="#E6E6E6" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
@@ -402,20 +494,26 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/prdt_totalpaybletv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="5dp"
-
                             android:text="Total payable"
                             android:textColor="#191919"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/prdt_tp_rupee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="160dp"
+
+                            android:layout_alignTop="@+id/prdt_totalpaybletv"
+                            android:layout_alignBottom="@+id/prdt_totalpaybletv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="\u20B9"
                             android:textColor="#191919"
                             android:textSize="14sp" />
@@ -424,12 +522,17 @@
                             android:id="@+id/pdt_total_amount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@+id/prdt_tp_rupee"
+                            android:layout_alignBottom="@+id/prdt_tp_rupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
                             android:text="0.00"
                             android:textColor="#191919"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </RelativeLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -440,69 +543,76 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#191919"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="2dp"
                 android:text="Processing fee"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="14sp"
-                android:padding="2dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"/>
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#636363"
-                android:text="Processing fee payable by student"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
                 android:fontFamily="@font/roboto"
-                android:textSize="12sp"
                 android:padding="2dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="6dp"/>
+                android:text="Processing fee payable by student"
+                android:textColor="#636363"
+                android:textSize="12sp" />
+
             <TextView
+                android:id="@+id/two_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#191919"
-                android:text="Action"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/roboto_bold"
-                android:textSize="14sp"
                 android:padding="2dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"/>
+                android:text="Action"
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/two_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#191919"
-                android:text="Cancel"
-                android:fontFamily="@font/roboto_medium"
-                android:textSize="14sp"
-                android:padding="2dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="2dp"
+                android:text="Cancel"
+                android:textColor="#191919"
+                android:textSize="14sp" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                >
+                android:layout_marginBottom="20dp">
+
                 <TextView
                     android:id="@+id/Cancel_TV"
                     android:layout_width="241dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#636363"
-                    android:text="Cancel this payment request. You can’t undo this!"
-                    android:fontFamily="@font/roboto_medium"
-                    android:textSize="12sp"
-                    android:padding="2dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"/>
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="2dp"
+                    android:text="Cancel this payment request. You can’t undo this!"
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pdt_cancel"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_toRightOf="@id/Cancel_TV"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
                     android:background="@drawable/cancelbtn"
                     android:text="Cancel"
                     android:textColor="#636363" />

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         navController = navHostFragment.getNavController();
         parent_layout = findViewById(R.id.Parent_layout);
 //        bottomNavigationView = findViewById(R.id.activity_main_bottom_navigation_view);
-//
+
 //        NavigationUI.setupWithNavController(bottomNavigationView, navController);
         //Toolbar
 

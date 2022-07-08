@@ -3,60 +3,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllActivityRecentFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.AllActivityRecentFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:id="@+id/filterlayout"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="78dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:elevation="10dp"
-        android:background="@drawable/stroke_box"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="12dp"
-        android:layout_height="wrap_content">
+        android:background="@drawable/stroke_box"
+        android:elevation="10dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-           android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginStart="12.5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
             android:text="Filter by: "
             android:textColor="#AEAEAE"
-            android:fontFamily="@font/roboto"/>
+            android:textSize="12sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Class "
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:textSize="12sp"
             android:fontFamily="@font/roboto_bold"
+            android:text="Classes "
             android:textColor="#191919"
-            />
+            android:textSize="12sp" />
+
         <TextView
+            android:id="@+id/class_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_bold"
             android:text="(12)"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="12sp"
-            android:fontFamily="@font/roboto_bold"
             android:textColor="#191919"
-            />
+            android:textSize="12sp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_down"
+            android:layout_marginStart="18.5dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="18dp"
-            android:layout_marginStart="18.5dp"/>
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_down" />
 
     </LinearLayout>
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nodata_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="18dp"
+        android:visibility="gone"
+        android:layout_below="@+id/filterlayout"
+        android:layout_alignParentEnd="true"
+        >
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="No data!"
+            android:textColor="#191919"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/roboto"
+            android:padding="1dp"
+            android:text="There are no data to show yet.Please check back later"
+            android:textColor="#636363"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ill_no_data" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allactivities_RV"
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivateFrag">
+    tools:context=".Fragment.ActivateFrag">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,10 +27,10 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nodata_cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="70dp"
                 android:layout_marginBottom="32dp"
                 android:visibility="gone"
                 app:cardCornerRadius="8dp">
@@ -125,10 +125,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/withdata_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="18dp"
                 android:layout_marginBottom="32dp"
                 app:cardCornerRadius="8dp">
 
@@ -137,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
@@ -152,14 +153,15 @@
                             android:textStyle="bold" />
                         <TextView
                             android:id="@+id/veiwMore_tv"
-                            android:layout_width="wrap_content"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:text="VIEW MORE"
-                            android:layout_marginStart="200dp"
+                            android:layout_marginStart="169dp"
                             android:layout_marginTop="25dp"
                             android:textColor="#1089FF"
                             android:textSize="12sp"
-                            android:padding="5dp"
+                            android:layout_marginEnd="12dp"
+                            android:padding="1dp"
                             android:fontFamily="@font/roboto_bold"
                             />
                     </LinearLayout>
@@ -240,6 +242,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="payment requested"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center"
                             android:textColor="#594099" />
                     </LinearLayout>
 
@@ -888,47 +892,47 @@
                 android:layout_marginHorizontal="12dp"
                 app:cardCornerRadius="8dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
 
-                    <TextView
-                        android:id="@+id/settlement_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="18dp"
-                        android:layout_marginTop="18dp"
-                        android:text="Settlements"
-                        android:textColor="#000000"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/settlement_TV"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="18dp"-->
+<!--                        android:layout_marginTop="18dp"-->
+<!--                        android:text="Settlements"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:id="@+id/Twlve_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="18dp"
-                        android:layout_toRightOf="@id/settlement_TV"
-                        android:text="(12)" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/settlementCount"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="18dp"-->
+<!--                        android:layout_toRightOf="@id/settlement_TV"-->
+<!--                        android:text="(12)" />-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@id/Twlve_tv"
-                        android:layout_marginStart="170dp"
-                        android:layout_toRightOf="@id/Twlve_tv"
-                        android:text="VIEW ALL"
-                        android:textColor="#1089FF"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignTop="@id/settlementCount"-->
+<!--                        android:layout_marginStart="170dp"-->
+<!--                        android:layout_toRightOf="@id/settlementCount"-->
+<!--                        android:text="VIEW ALL"-->
+<!--                        android:textColor="#1089FF"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/settlement_RV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/settlement_TV"
-                        android:layout_marginTop="15dp" />
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/settlement_RV"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/settlement_TV"-->
+<!--                        android:layout_marginTop="15dp" />-->
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
             </androidx.cardview.widget.CardView>
 <RelativeLayout
@@ -948,17 +952,18 @@
                 android:textColor="#191919"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-            <TextView
-                android:id="@+id/ra_viewAll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="170dp"
-                android:text="VIEW ALL"
-                android:layout_toEndOf="@+id/ra_recentActivites_tv"
-                android:textColor="#1089FF"
-                android:layout_alignTop="@+id/ra_recentActivites_tv"
-                android:layout_alignBottom="@+id/ra_recentActivites_tv"
-                android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ra_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ra_recentActivites_tv"
+        android:layout_alignBottom="@+id/ra_recentActivites_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:text="VIEW ALL"
+        android:textColor="#1089FF"
+        android:textStyle="bold" />
 </RelativeLayout>
             <!-- <androidx.cardview.widget.CardView
                  android:layout_width="match_parent"

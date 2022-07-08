@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InvoiceFragment">
+    tools:context=".Fragment.InvoiceFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Invoice"
-        android:textSize="40dp"
-        android:gravity="center"/>
+   <com.github.barteksc.pdfviewer.PDFView
+       android:id="@+id/invoice_pdf"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 
 </FrameLayout>

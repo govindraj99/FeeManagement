@@ -3,7 +3,7 @@ package com.example.fee_management_new.Api;
 import java.util.ArrayList;
 
 public class RequestGeneratePaymentRequestIndividual {
-    public int amount;
+    public double amount;
     public String note;
     public String paymentType;
     public Object paymentMethod;
@@ -13,7 +13,7 @@ public class RequestGeneratePaymentRequestIndividual {
     public ArrayList<Integer> userIds;
     public int standardId;
 
-    public RequestGeneratePaymentRequestIndividual(int amount, String note, String paymentType, Object paymentMethod, String discountDetails, Object additionDetails, String dueDate, ArrayList<Integer> userIds, int standardId) {
+    public RequestGeneratePaymentRequestIndividual(double amount, String note, String paymentType, Object paymentMethod, String discountDetails, Object additionDetails, String dueDate, ArrayList<Integer> userIds, int standardId) {
         this.amount = amount;
         this.note = note;
         this.paymentType = paymentType;
@@ -25,7 +25,7 @@ public class RequestGeneratePaymentRequestIndividual {
         this.standardId = standardId;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 

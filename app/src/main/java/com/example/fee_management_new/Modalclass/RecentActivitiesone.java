@@ -1,9 +1,10 @@
 package com.example.fee_management_new.Modalclass;
 
 public class RecentActivitiesone {
-    String name,std,section,amount,date,status,note;
+    String name,std,section,amount,date,status,note,image;
+    int id;
 
-    public RecentActivitiesone(String name, String std, String section, String amount, String date, String status,String note) {
+    public RecentActivitiesone(String name, String std, String section, String amount, String date, String status,String note,String image,int id) {
         this.name = name;
         this.std = std;
         this.section = section;
@@ -11,6 +12,8 @@ public class RecentActivitiesone {
         this.date = date;
         this.status = status;
         this.note = note;
+        this.image = image;
+        this.id = id;
     }
 
     public String getNote() {
@@ -39,5 +42,13 @@ public class RecentActivitiesone {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public int getId() {
+        return id;
     }
 }

@@ -10,6 +10,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -40,7 +41,7 @@ public interface ApiService {
 
     @Headers({token, link})
     @GET("feev2/allTransactions")
-    Call<GetAllTransactionResponse> GET_ALL_TRANSACTION_RESPONSE_CALL(@Query("page") int pageNo, @Query("allRecords") String allRecords);
+    Call<GetAllTransactionResponse> GET_ALL_TRANSACTION_RESPONSE_CALL(@Query("allRecords") String allRecords);
 
     @Headers({token, link})
     @GET("feev2/allTransactions")
@@ -54,6 +55,22 @@ public interface ApiService {
     @GET("feev2/getUser")
     Call<List<GetUserInAClassResponse>> GET_USER_IN_A_CLASS_RESPONSE_CALL(@Query("standardId") int stdId, @Query("search") String search);
 
+    @Headers({token, link})
+    @GET("feev2/transactions-by-user/{stdId}/{userId}")
+    Call<List<TransactionByAUserResponse>> TRANSACTION_BY_A_USER_RESPONSE_CALL(@Path("stdId") int stdID, @Path("userId") int userId);
+
+    @Headers({token,link})
+    @POST("feev2/update-offline-transactions")
+    Call<UpdateOfflineTransactionResponse> UPDATE_OFFLINE_TRANSACTION_RESPONSE_CALL(@Body UpdateOfflineTransactionRequest updateOfflineTransactionRequest);
+
+    @Headers({token,link})
+    @POST("feev2")
+    Call<GenerateNewOfflinePaymentResponse> GENERATE_NEW_OFFLINE_PAYMENT_RESPONSE_CALL(@Body GenerateNewOfflinePaymentRequest generateNewOfflinePaymentRequest);
+
+    @Headers({token,link})
+    @POST("feev2/updateSettings")
+    Call<SettingsResponse> SETTINGS_RESPONSE_CALL(@Body SettingsRequest settingsRequest);
+
     @Headers({token,link})
     @GET("feev2/transaction/{id}")
     Call<PaymentRequestDetailsTwoResponse> PAYMENT_REQUEST_DETAILS_TWO_RESPONSE_CALL(@Path("id") int id);
@@ -61,6 +78,14 @@ public interface ApiService {
     @Headers({token,link})
     @GET("feev2/allTransactions")
     Call<GetAllTransactionResponse> paidTransactions(@QueryMap Map<String, String> params);
+
+    @Headers({token,link})
+    @PATCH("feeV2/cancel-request/{id}")
+    Call<CancelRequestResponse> CANCEL_REQUEST_RESPONSE_CALL(@Path("id") int id);
+
+    @Headers({token,link})
+    @GET("feeV2/download-report")
+    Call<DownloadReportResponse> DOWNLOAD_REPORT_RESPONSE_CALL(@QueryMap Map<String,String> params);
 
 }
 

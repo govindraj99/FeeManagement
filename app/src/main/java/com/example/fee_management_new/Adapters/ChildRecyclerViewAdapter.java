@@ -2,7 +2,6 @@ package com.example.fee_management_new.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,18 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fee_management_new.ActivateFragDirections;
-import com.example.fee_management_new.AllStudentFragmentDirections;
-import com.example.fee_management_new.IntegeratedBatchAFragment;
+import com.example.fee_management_new.Fragment.AllStudentFragmentDirections;
 import com.example.fee_management_new.Modalclass.ChildModelclass;
 import com.example.fee_management_new.R;
 
@@ -49,8 +42,8 @@ public class ChildRecyclerViewAdapter extends RecyclerView.Adapter<ChildRecycler
     public void onBindViewHolder(@NonNull MyViewholder holder, @SuppressLint("RecyclerView") int position) {
         ChildModelclass currentItem = childModelclassArrayList.get(position);
         holder.Section.setText(currentItem.getSection());
-        holder.studentCount.setText(currentItem.getStudentCount());
-        holder.courseName.setText(currentItem.getCoursename());
+        holder.studentCount.setText(new StringBuilder().append(currentItem.getStudentCount()).append(" Students").toString());
+//        holder.courseName.setText(currentItem.getCoursename());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +51,7 @@ public class ChildRecyclerViewAdapter extends RecyclerView.Adapter<ChildRecycler
                 int id= currentItem.getId();
                 String std = currentItem.getStd();
                 String section = currentItem.getSection();
-                NavDirections action = com.example.fee_management_new.AllStudentFragmentDirections.actionAllStudentFragmentToIntegeratedBatchAFragment(section,std,id);
+                NavDirections action = AllStudentFragmentDirections.actionAllStudentFragmentToIntegeratedBatchAFragment(section,std,id);
                 Navigation.findNavController(view).navigate(action);
             }
         });
@@ -76,7 +69,7 @@ public class ChildRecyclerViewAdapter extends RecyclerView.Adapter<ChildRecycler
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
                 Section = itemView.findViewById(R.id.section);
-                courseName = itemView.findViewById(R.id.coursename);
+//                courseName = itemView.findViewById(R.id.coursename);
                 studentCount = itemView.findViewById(R.id.studentcount);
         }
     }

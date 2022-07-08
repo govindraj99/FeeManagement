@@ -1,10 +1,10 @@
 package com.example.fee_management_new.Modalclass;
 
 public class AllActivitesTwoModal {
-    String name,rollno,amount,note,date,status;
+    String name,rollno,amount,note,date,status,image;
     int id;
 
-    public AllActivitesTwoModal(String name, String rollno, String amount, String note, String date, String status,int id) {
+    public AllActivitesTwoModal(String name, String rollno, String amount, String note, String date, String status,int id,String image) {
         this.name = name;
         this.rollno = rollno;
         this.amount = amount;
@@ -12,6 +12,7 @@ public class AllActivitesTwoModal {
         this.date = date;
         this.status = status;
         this.id = id;
+        this.image = image;
     }
 
     public int getId() {
@@ -40,5 +41,9 @@ public class AllActivitesTwoModal {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getImage() {
+        return image;
     }
 }

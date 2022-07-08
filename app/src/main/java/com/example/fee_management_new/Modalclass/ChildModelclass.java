@@ -4,8 +4,8 @@ public class ChildModelclass {
     String Coursename,section,StudentCount,std;
     int id;
 
-    public ChildModelclass(String coursename, String section, String studentCount,int id,String std) {
-        Coursename = coursename;
+    public ChildModelclass(String section, String studentCount,int id,String std) {
+//        Coursename = coursename;
         this.section = section;
         StudentCount = studentCount;
         this.id=id;
@@ -16,9 +16,9 @@ public class ChildModelclass {
         return std;
     }
 
-    public String getCoursename() {
-        return Coursename;
-    }
+//    public String getCoursename() {
+//        return Coursename;
+//    }
 
     public String getSection() {
         return section;

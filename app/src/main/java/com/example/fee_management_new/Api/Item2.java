@@ -36,8 +36,8 @@ public class Item2 {
     public boolean gstApplicable;
     public String discount_details;
     public String addition_details;
-    public int total_discount;
-    public int total_addition;
+    public float total_discount;
+    public float total_addition;
     public String payment_type;
     public String cheque_no;
     public Date updatedAt;
@@ -172,11 +172,11 @@ public class Item2 {
         return addition_details;
     }
 
-    public int getTotal_discount() {
+    public float getTotal_discount() {
         return total_discount;
     }
 
-    public int getTotal_addition() {
+    public float getTotal_addition() {
         return total_addition;
     }
 

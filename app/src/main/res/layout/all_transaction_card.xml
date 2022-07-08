@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/ElizaImg"
+                android:id="@+id/ElizaImg_alltransaction"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="18dp"
@@ -32,9 +32,9 @@
                 android:id="@+id/namesT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/ElizaImg"
+                android:layout_alignTop="@id/ElizaImg_alltransaction"
                 android:layout_marginStart="12dp"
-                android:layout_toRightOf="@id/ElizaImg"
+                android:layout_toRightOf="@id/ElizaImg_alltransaction"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Eliza O'Conner"
                 android:textColor="#000000"
@@ -44,10 +44,10 @@
                 android:id="@+id/stdtv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/ElizaImg"
+                android:layout_alignTop="@id/ElizaImg_alltransaction"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="25dp"
-                android:layout_toRightOf="@id/ElizaImg"
+                android:layout_toEndOf="@id/ElizaImg_alltransaction"
                 android:text="Integrated Batch"
                 android:textSize="14dp" />
 
@@ -72,7 +72,7 @@
                 android:id="@+id/Amount_transac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ElizaImg"
+                android:layout_below="@id/ElizaImg_alltransaction"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="30dp"
                 android:text="\u20B9 12,000"
@@ -150,37 +150,37 @@
 
             <TextView
                 android:id="@+id/offline_tv"
-                android:layout_width="130dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/ElizaImg"
+                android:layout_alignTop="@id/ElizaImg_alltransaction"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="170dp"
-                android:layout_toRightOf="@id/ElizaImg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
                 android:background="@drawable/offlinebtn"
                 android:padding="6dp"
                 android:text="OFFLINE"
                 android:textAlignment="center"
-                android:textColor="#FFA931"
+                android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:visibility="gone"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/online_tv"
-                android:layout_width="110dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/ElizaImg"
+                android:layout_alignTop="@id/ElizaImg_alltransaction"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="170dp"
-                android:layout_toEndOf="@id/ElizaImg"
+                android:layout_marginEnd="18dp"
                 android:background="@drawable/onlinebtn"
                 android:padding="6dp"
                 android:text="ONLINE"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:visibility="gone"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

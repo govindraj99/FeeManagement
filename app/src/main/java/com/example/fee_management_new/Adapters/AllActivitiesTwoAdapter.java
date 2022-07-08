@@ -7,13 +7,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fee_management_new.AllActivitiesTwoFragmentArgs;
-import com.example.fee_management_new.AllActivitiesTwoFragmentDirections;
+//import com.example.fee_management_new.AllActivitiesTwoFragmentArgs;
+//import com.example.fee_management_new.AllActivitiesTwoFragmentDirections;
+import com.bumptech.glide.Glide;
+import com.example.fee_management_new.Fragment.AllActivitiesTwoFragmentDirections;
 import com.example.fee_management_new.Modalclass.AllActivitesTwoModal;
 import com.example.fee_management_new.R;
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 
@@ -21,6 +25,7 @@ public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesT
     Context context;
     ArrayList<AllActivitesTwoModal> allActivitesTwoModals;
     int id;
+    static final String baseUrlForImages = "https://s3.ap-south-1.amazonaws.com/test.files.classroom.digital/";
 
 
     public AllActivitiesTwoAdapter(Context context, ArrayList<AllActivitesTwoModal> allActivitesTwoModals) {
@@ -44,11 +49,12 @@ public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesT
         holder.allactivitiesTwo_Amount.setText(currentData.getAmount());
         holder.allactivitiesTwo_Note.setText(currentData.getNote());
         holder.allactivitiesTwo_Date.setText(currentData.getDate());
+        Glide.with(context).load(baseUrlForImages+currentData.getImage()).into(holder.allActivity_TwoIV);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 id = currentData.getId();
-                com.example.fee_management_new.AllActivitiesTwoFragmentDirections.ActionAllActivitiesFragmentToPaymentRequesrtDetailsTwoFragment action = com.example.fee_management_new.AllActivitiesTwoFragmentDirections.actionAllActivitiesFragmentToPaymentRequesrtDetailsTwoFragment(id);
+                NavDirections action = com.example.fee_management_new.Fragment.AllActivitiesTwoFragmentDirections.actionAllActivitiesFragmentToPaymentRequesrtDetailsTwoFragment(id);
                 Navigation.findNavController(view).navigate(action);
             }
         });
@@ -101,6 +107,7 @@ public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesT
 
     public class AllActivitiesTwoViewHolder extends RecyclerView.ViewHolder{
         TextView allactivitiesTwo_name,allactivitiesTwo_Rollno,allactivitiesTwo_Amount,allactivitiesTwo_Note,allactivitiesTwo_Date,allactivitiesTwo_pending,allactivitiesTwo_refunded,allactivitiesTwo_cancelle,allactivitiesTwo_Paid,allactivitiesTwo_Overdue;
+        ShapeableImageView allActivity_TwoIV;
 
         public AllActivitiesTwoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -114,6 +121,7 @@ public class AllActivitiesTwoAdapter extends RecyclerView.Adapter<AllActivitiesT
             allactivitiesTwo_cancelle = itemView.findViewById(R.id.allactivitytwo_cancelled);
             allactivitiesTwo_Paid = itemView.findViewById(R.id.allactivitytwo_paid);
             allactivitiesTwo_Overdue = itemView.findViewById(R.id.allactivitytwo_overdue);
+            allActivity_TwoIV = itemView.findViewById(R.id.all_activity_TwoRVImage);
 
         }
 

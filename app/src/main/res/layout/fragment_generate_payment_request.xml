@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GeneratePaymentRequest">
+    android:id="@+id/co"
+    tools:context=".Fragment.GeneratePaymentRequest">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -14,15 +15,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="6dp"
                 android:text="To whom do you want to sent the request to?"
@@ -33,8 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/individualBtn"
                     android:layout_width="160dp"
@@ -92,12 +91,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/studentnametv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="18dp"
                 android:fontFamily="@font/roboto_bold"
-                android:padding="5dp"
+                android:padding="2dp"
                 android:text="Student’s name/mobile"
                 android:textColor="#636363"
                 android:textSize="12sp"
@@ -105,16 +105,17 @@
                 />
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/name_search_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="10dp"
+                app:startIconDrawable="@drawable/search_img"
                 app:boxStrokeColor="#E6E6E6"
-                app:hintTextColor="#AEAEAE"
-                app:startIconDrawable="@drawable/search_img">
+                app:hintTextColor="#AEAEAE">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
                     android:id="@+id/name_searchET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -162,11 +163,11 @@
                     app:hintTextColor="#AEAEAE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Amount_ET"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Amount_ET"
-                        android:inputType="number"
                         android:hint="\u20B9"
+                        android:inputType="number"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,22 +181,22 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="24dp"
                     android:layout_toRightOf="@id/Amount_Tl"
+                    android:focusableInTouchMode="false"
                     android:textColorHint="#AEAEAE"
                     app:boxStrokeColor="#E6E6E6"
                     app:endIconDrawable="@drawable/ic_calendar"
                     app:endIconMode="custom"
-                    android:focusableInTouchMode="false"
                     app:hintTextColor="#AEAEAE">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/datepick"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Set due date"
-                        android:inputType="date"
+                        android:clickable="false"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
-                        android:clickable="false"
+                        android:hint="Set due date"
+                        android:inputType="date"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -235,10 +236,10 @@
                 app:hintTextColor="#AEAEAE">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_ET"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:hint="Enter description"
-                    android:id="@+id/description_ET"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,7 +255,6 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/border5"
@@ -265,13 +265,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/feeamount_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -281,148 +282,185 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/rupee_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="165dp"
+                            android:layout_alignTop="@id/feeamount_tv"
+                            android:layout_alignBottom="@+id/feeamount_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="\u20B9"
                             android:textColor="#191919"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/gpro_fee_amountRS"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@id/rupee_tv"
+                            android:layout_alignBottom="@id/rupee_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
                             android:text="0.00"
                             android:textColor="#191919"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </RelativeLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gprto_discountRV"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="3dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/DiscountTV"
+                            android:id="@+id/gprt_discount_tv"
                             android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:padding="8dp"
+                            android:padding="5dp"
                             android:text="Discount"
                             android:textColor="#1089FF"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/gprt_rupee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="180dp"
+                            android:layout_alignTop="@id/gprt_discount_tv"
+                            android:layout_alignBottom="@id/gprt_discount_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="-\u20B9"
                             android:textColor="#1089FF"
                             android:textSize="14sp" />
 
+
                         <TextView
+                            android:id="@+id/gprto_add_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@id/gprt_rupee"
+                            android:layout_alignBottom="@id/gprt_rupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="0.00"
-                            android:visibility="gone"
-                            android:textColor="#1089FF"
-                            android:textSize="14sp" />
-                        <TextView
-                            android:id="@+id/add_tv"
-                            android:layout_width="35dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
                             android:text="Add"
                             android:textColor="#1089FF"
                             android:textSize="14sp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/discount2_layout"
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="18dp"
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gprto_additionRV"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="3dp" />
 
-                        <TextView
-                            android:id="@+id/DiscountTV2"
-                            android:layout_width="75dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_medium"
-                            android:padding="8dp"
-                            android:text="Discount"
-                            android:textColor="#1089FF"
-                            android:textSize="14sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="180dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="-\u20B9"
-                            android:textColor="#1089FF"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:fontFamily="@font/roboto_medium"
-                            android:text="0.00"
-                            android:visibility="gone"
-                            android:textColor="#1089FF"
-                            android:textSize="14sp" />
-                        <TextView
-                            android:id="@+id/add_tv2"
-                            android:layout_width="35dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:fontFamily="@font/roboto_medium"
-                            android:text="Add"
-                            android:textColor="#1089FF"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/gprt_addition_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:padding="8dp"
+                            android:padding="5dp"
                             android:text="Addition"
                             android:textColor="#FFA931"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/gprt_addtionrupee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="180dp"
+                            android:layout_alignTop="@id/gprt_addition_tv"
+                            android:layout_alignBottom="@+id/gprt_addition_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="+\u20B9"
                             android:textColor="#FFA931"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/gprto_additionRS_addtv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@id/gprt_addtionrupee"
+                            android:layout_alignBottom="@+id/gprt_addtionrupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="0.00"
+                            android:gravity="center"
+                            android:text="Add"
                             android:textColor="#FFA931"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gprt_gst_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:padding="5dp"
+                            android:text="GST"
+                            android:textColor="#636363"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gprt_gstrupee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/gprt_gst_tv"
+                            android:layout_alignBottom="@+id/gprt_gst_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:text="+\u20B9"
+                            android:textColor="#636363"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gst_TotalAmt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/gprt_gstrupee"
+                            android:layout_alignBottom="@+id/gprt_gstrupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:text="0.0"
+                            android:textColor="#636363"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -430,7 +468,7 @@
                         android:layout_marginTop="10dp"
                         android:background="#E6E6E6" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
@@ -438,34 +476,45 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/totalpay_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="5dp"
-
                             android:text="Total payable"
                             android:textColor="#191919"
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/gprto_rupee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="160dp"
+                            android:layout_alignTop="@id/totalpay_tv"
+                            android:layout_alignBottom="@id/totalpay_tv"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="68dp"
                             android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
                             android:text="\u20B9"
                             android:textColor="#191919"
                             android:textSize="14sp" />
 
+
                         <TextView
-                            android:id="@+id/total_amt_payable"
+                            android:id="@+id/gprto_totalpayment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_alignTop="@id/gprto_rupee"
+                            android:layout_alignBottom="@id/gprto_rupee"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="0.00"
+                            android:gravity="center"
+                            android:text="0.0"
                             android:textColor="#191919"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </RelativeLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
@@ -479,8 +528,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/Processingfee_tv"
@@ -495,6 +543,7 @@
                     android:textSize="14sp" />
 
                 <ImageView
+                    android:id="@+id/processfee_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/Processingfee_tv"
@@ -502,25 +551,28 @@
                     android:layout_marginTop="11dp"
                     android:layout_toEndOf="@id/Processingfee_tv"
                     android:background="@drawable/ic_info" />
+
                 <TextView
-                    android:id="@+id/tv"
+                    android:id="@+id/fee_payer_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Processing fee payable by student"
                     android:layout_below="@id/Processingfee_tv"
                     android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto_medium"
                     android:padding="8dp"
-                    android:textColor="#636363"
-                    android:layout_marginTop="10dp"/>
+                    android:text="Select From Settings Processing fee payable by "
+                    android:textColor="#636363" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Go to settings to edit options"
-                    android:textColor="#302A5F14"
+                    android:layout_below="@id/fee_payer_tv"
+                    android:layout_marginStart="24dp"
                     android:padding="8dp"
-                    android:layout_below="@id/tv"
-                    android:layout_marginStart="24dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:text="Go to settings to edit options"
+                    android:textColor="#302A5F14" />
 
             </RelativeLayout>
 
@@ -528,8 +580,8 @@
     </ScrollView>
 
     <Button
-        android:layout_width="171dp"
         android:id="@+id/send_request_btn"
+        android:layout_width="171dp"
         android:layout_height="44dp"
         android:layout_gravity="bottom|center_horizontal"
         android:background="@drawable/border5"

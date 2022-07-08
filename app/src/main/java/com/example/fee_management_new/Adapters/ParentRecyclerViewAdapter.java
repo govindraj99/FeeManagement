@@ -46,6 +46,10 @@ public class ParentRecyclerViewAdapter extends RecyclerView.Adapter<ParentRecycl
         this.stdName = stdName;
         this.listHashMap = listHashMap;
     }
+    public void filterList(ArrayList<ParentModal> filterlist){
+        parentModelArrayList = filterlist;
+        notifyDataSetChanged();
+    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -74,7 +78,7 @@ public class ParentRecyclerViewAdapter extends RecyclerView.Adapter<ParentRecycl
         for (int i = 0; i < stdName.size(); i++) {
             for (int j = 0; j < listHashMap.get(stdName.get(i)).size(); j++) {
                 if (parentModelArrayList.get(position).getStdClass().equals(listHashMap.get(stdName.get(i)).get(j).getStd())) {
-                    arrayList.add(new ChildModelclass(listHashMap.get(stdName.get(i)).get(j).getSection(), listHashMap.get(stdName.get(i)).get(j).getSection(), String.valueOf(listHashMap.get(stdName.get(i)).get(j).getStudentsCount()),listHashMap.get(stdName.get(i)).get(j).getId(),listHashMap.get(stdName.get(i)).get(j).getStd()));
+                    arrayList.add(new ChildModelclass(listHashMap.get(stdName.get(i)).get(j).getSection(), String.valueOf(listHashMap.get(stdName.get(i)).get(j).getStudentsCount()),listHashMap.get(stdName.get(i)).get(j).getId(),listHashMap.get(stdName.get(i)).get(j).getStd()));
                 }
             }
         }

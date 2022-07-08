@@ -22,15 +22,15 @@
         android:textColor="#594099"
         android:fontFamily="@font/pt_serif_bold"
         android:textSize="36sp" />
-    <TextView
-        android:id="@+id/coursename"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="selenium"
-        android:textColor="#636363"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:textSize="16sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/coursename"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="selenium"-->
+<!--        android:textColor="#636363"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:textSize="16sp"/>-->
     <View
         android:layout_width="50dp"
         android:layout_height="2dp"

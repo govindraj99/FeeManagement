@@ -83,7 +83,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@id/transactioncount_tv"
                 android:fontFamily="@font/roboto"
-                android:text="Transaction"
+                android:text="Transactions"
                 android:textColor="#636363"
                 android:textSize="12sp" />
 

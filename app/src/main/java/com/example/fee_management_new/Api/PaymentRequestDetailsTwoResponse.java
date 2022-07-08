@@ -21,7 +21,7 @@ public class PaymentRequestDetailsTwoResponse {
     public String amount;
     public double transactionFee;
     public double settlementFee;
-    public int amountPayable;
+    public float amountPayable;
     public double processignPaidByIns;
     public String org;
     public String orgId;
@@ -41,7 +41,7 @@ public class PaymentRequestDetailsTwoResponse {
     public boolean gstApplicable;
     public Object discount_details;
     public Object addition_details;
-    public int total_discount;
+    public float total_discount;
     public int total_addition;
     public String payment_type;
     public String cheque_no;
@@ -95,7 +95,7 @@ public class PaymentRequestDetailsTwoResponse {
         return settlementFee;
     }
 
-    public int getAmountPayable() {
+    public float getAmountPayable() {
         return amountPayable;
     }
 
@@ -175,7 +175,7 @@ public class PaymentRequestDetailsTwoResponse {
         return addition_details;
     }
 
-    public int getTotal_discount() {
+    public float getTotal_discount() {
         return total_discount;
     }
 
