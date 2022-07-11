@@ -1,9 +1,11 @@
 package com.example.fee_management_new.Fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -39,8 +41,10 @@ import com.example.fee_management_new.Modalclass.SettelmentModel;
 import com.example.fee_management_new.Modalclass.TransactionData;
 import com.example.fee_management_new.R;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,12 +74,14 @@ public class ActivateFrag extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_activate, container, false);
+
         apiInit();
         Initwigits();
 //        buildRecentActivity();
@@ -196,15 +202,34 @@ public class ActivateFrag extends Fragment {
         apiService = ApiClient.getLoginService();
     }
 
+
     private void overviewcardResponse() {
+        Calendar c1 = Calendar.getInstance();
+        Calendar c2 = Calendar.getInstance();
+        c1.set(Calendar.DAY_OF_WEEK, 1);
+
+        int year1 = c1.get(Calendar.YEAR);
+        int month1 = c1.get(Calendar.MONTH)+1;
+        int day1 = c1.get(Calendar.DAY_OF_MONTH);
+        String st = day1 +"/"+month1+"/"+year1;
+
+        c2.set(Calendar.DAY_OF_WEEK, 7);
+
+        int year7 = c1.get(Calendar.YEAR);
+        int month7 = c1.get(Calendar.MONTH)+1;
+        int day7 = c1.get(Calendar.DAY_OF_MONTH);
+        String et = day7 +"/"+month7+"/"+year7;
+        Log.i(TAG, "onResponse: date--->"+st);
 //        String startDate="2022-03-20";
 //        String endDate="2022-03-26";
 //        String type = "week";
         Map<String, String> param = new HashMap<>();
         Call<OverViewResponse> overViewResponseCall = apiService.OVER_VIEW_RESPONSE_CALL(param);
         overViewResponseCall.enqueue(new Callback<OverViewResponse>() {
+
             @Override
             public void onResponse(Call<OverViewResponse> call, Response<OverViewResponse> response) {
+
                 Log.i(TAG, "onResponse:calling overview  ");
                 if (!response.isSuccessful()) {
                     Toast.makeText(getContext(), String.valueOf(response.code()), Toast.LENGTH_SHORT).show();

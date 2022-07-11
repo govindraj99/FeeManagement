@@ -1,6 +1,7 @@
 package com.example.fee_management_new.Fragment;
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,9 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,8 +38,10 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.MPPointF;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,7 +55,7 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
     TextView Noofpayoverview;
     BarChart mChart;
     ApiService apiService;
-    TextView No_of_payments, Total_Amt, Payment_req, paymentpending, pendingamount, pendingtoday, paymentpaid, paidamounts, paidtoday, paymentOverdue, overdueamount, overdueToday, paymentcancelled, cancelledamount, cancelledtoday, paymenRefunded, refundAmount, refundedToday;
+    TextView No_of_payments, Total_Amt, Payment_req, paymentpending, pendingamount, pendingtoday, paymentpaid, paidamounts, paidtoday, paymentOverdue, overdueamount, overdueToday, paymentcancelled, cancelledamount, cancelledtoday, paymenRefunded, refundAmount, refundedToday, week, month;
     //    ArrayList<Graph> strings = new ArrayList<Graph>();
     ArrayList<Float> yVlaues;
     ArrayList<String> xVlaues;
@@ -59,6 +64,7 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
     private static final int MAX_YValue = 4000;
     private static final int MIN_YValue = 0;
     private String[] DAYS = null;
+    EditText datefilter, timefilter;
 
     public Overview() {
         // Required empty public constructor
@@ -102,11 +108,55 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
         Payment_req.setText(Payment_Req);
         mChart = view.findViewById(R.id.barchart);
         overViewResponseforgraph();
+        timefilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                weekbottomsheet();
+            }
+        });
+        datefilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datefilerbottomSheet();
+
+            }
+        });
 
 
         return view;
 
 
+    }
+
+    private void datefilerbottomSheet() {
+        Calendar c1 = Calendar.getInstance();
+        
+    }
+
+    private void weekbottomsheet() {
+        view = getLayoutInflater().inflate(R.layout.week_bottomsheet, null);
+        week = view.findViewById(R.id.o_week);
+        month = view.findViewById(R.id.o_month);
+        BottomSheetDialog bt = new BottomSheetDialog(getActivity(), R.style.AppBottomSheetDialogTheme);
+        bt.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        bt.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        bt.setContentView(view);
+        bt.setCanceledOnTouchOutside(true);
+        bt.getWindow().setGravity(Gravity.BOTTOM);
+        bt.setCanceledOnTouchOutside(true);
+        bt.show();
+        week.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                timefilter.setText("Week");
+            }
+        });
+        month.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                timefilter.setText("Month");
+            }
+        });
     }
 
     private void initWidigets() {
@@ -129,6 +179,8 @@ public class Overview extends Fragment implements OnChartValueSelectedListener {
         paymenRefunded = view.findViewById(R.id.o_paymentRefund);
         refundAmount = view.findViewById(R.id.o_amount6_tv);
         refundedToday = view.findViewById(R.id.refunded_today);
+        timefilter = view.findViewById(R.id.time_Filter);
+        datefilter = view.findViewById(R.id.date_Filter);
 
     }
 
